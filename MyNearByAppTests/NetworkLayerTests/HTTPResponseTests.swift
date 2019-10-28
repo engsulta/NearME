@@ -2,13 +2,13 @@
 //  HTTPResponseTests.swift
 //  NetworkServicesTests
 //
-//  Created by Atta Amed on 10/21/19.
-//  Copyright © 2019 Vodafone. All rights reserved.
+//  Created by Ahmed Sultan on 10/28/19.
+//  Copyright © 2019 Ahmed Sultan. All rights reserved.
 //
 
 import Foundation
 import XCTest
-@testable import VFGFoundation
+@testable import MyNearByApp
 
 class HTTPResponseTests: XCTestCase {
 

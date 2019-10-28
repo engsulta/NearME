@@ -2,28 +2,26 @@
 //  NetworkLoggerTests.swift
 //  NetworkServicesTests
 //
-//  Created by Atta Amed on 10/21/19.
-//  Copyright © 2019 Vodafone. All rights reserved.
+//  Created by Ahmed Sultan on 10/28/19.
+//  Copyright © 2019 Ahmed Sultan. All rights reserved.
 //
 
 import Foundation
 import XCTest
-@testable import VFGFoundation
+@testable import MyNearByApp
 
 class NetworkLoggerTests: XCTestCase {
 
     let session = URLSessionMock()
-    var mockClient: VFGNetworkClient!
-    var mockRequest: VFGRequestProtocol!
+    var mockClient: NetworkManager!
+    var mockRequest: RequestProtocol!
 
     override func setUp() {
         super.setUp()
-        mockClient = VFGNetworkClient(baseURL: "www.test.com", session: session)
-        mockRequest = VFGRequest(path: "www.test.com", httpMethode: .get,
-                                 httpTask: .request,
-                                 headers: ["test": "test"],
-                                 isAuthenticationNeededRequest: false,
-                                 cachePolicy: .reloadIgnoringLocalCacheData)
+        mockClient = NetworkManager(baseURL: "www.test.com", session: session)
+        mockRequest = NearByRequest(path: "www.test.com", httpMethode: .get,
+                                    headers: ["test": "test"],
+                                    cachePolicy: .reloadIgnoringLocalCacheData)
     }
 
     func testLogRequest( ) {
@@ -32,7 +30,7 @@ class NetworkLoggerTests: XCTestCase {
             XCTFail("fail to create request")
             return
         }
-        VFGNetworkLogger.log(request: request)
+        NetworkLogger.log(request: request)
     }
 
     func testLogResponse( ) {
@@ -44,12 +42,7 @@ class NetworkLoggerTests: XCTestCase {
             XCTFail("fail to create response")
             return
         }
-        VFGNetworkLogger.log(response: response)
-    }
-
-    func testLogJson() {
-        let testParmaters = ["name": "atta"]
-        VFGNetworkLogger.log(jsonResponse: testParmaters )
+        NetworkLogger.log(response: response)
     }
 
     override func tearDown() {

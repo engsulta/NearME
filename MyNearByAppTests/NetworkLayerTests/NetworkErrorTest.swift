@@ -2,31 +2,23 @@
 //  VFGNetworkErrorTest.swift
 //  NetworkServicesTests
 //
-//  Created by Ahmed Sultan on 10/21/19.
-//  Copyright © 2019 Vodafone. All rights reserved.
+//  Created by Ahmed Sultan on 10/28/19.
+//  Copyright © 2019 Ahmed Sultan. All rights reserved.
 //
 
 import XCTest
-@testable import VFGFoundation
-class VFGNetworkErrorTest: XCTestCase {
+@testable import MyNearByApp
+class NetworkErrorTest: XCTestCase {
     func testNetworkErrorLocalizedDescription() {
-        let expected: [String] = ["Unable to parse response",
-                                  "Network operation failed",
-                                  "Empty response",
+        let expected: [String] = [
                                   "missing URL",
                                   "encodingFailed",
-                                  "Unknown",
-                                  "Authentication token missed",
                                   "no Internet Connection"]
 
-        for (index, testError) in [VFGNetworkError.parse,
-                                   VFGNetworkError.network,
-                                   VFGNetworkError.empty,
-                                   VFGNetworkError.missingURL,
-                                   VFGNetworkError.encodingFailed,
-                                   VFGNetworkError.unknown,
-                                   VFGNetworkError.authFailed,
-                                   VFGNetworkError.noInternetConnection].enumerated() {
+        for (index, testError) in [
+                                   NetworkRequestError.missingURL,
+                                   NetworkRequestError.encodingFailed,
+                                   NetworkRequestError.noInternetConnection].enumerated() {
                                     XCTAssertEqual(testError.rawValue, expected[index])
         }
     }
@@ -35,17 +27,13 @@ class VFGNetworkErrorTest: XCTestCase {
         let expected: [String] = ["You need to be authenticated first.",
                                   "Bad request",
                                   "server encountered an unexpected condition",
-                                  "The url you requested is outdated.",
-                                  "Network request failed.",
                                   "Response returned with no data to decode.",
                                   "We could not decode the response."]
-        for (index, testError) in [VFGNetworkResponse.authenticationError,
-                                   VFGNetworkResponse.badRequest,
-                                   VFGNetworkResponse.serverError,
-                                   VFGNetworkResponse.outdated,
-                                   VFGNetworkResponse.failed,
-                                   VFGNetworkResponse.noData,
-                                   VFGNetworkResponse.unableToDecode].enumerated() {
+        for (index, testError) in [NetworkResponse.authenticationError,
+                                   NetworkResponse.badRequest,
+                                   NetworkResponse.serverError,
+                                   NetworkResponse.noData,
+                                   NetworkResponse.unableToDecode].enumerated() {
                                     XCTAssertEqual(testError.rawValue, expected[index])
         }
     }
