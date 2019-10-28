@@ -61,7 +61,10 @@ extension NetworkManager {
             }
             NetworkLogger.log(response: httpResponse)
             do {
+                let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? String
+                print(jsonData ?? "")
                 let apiResponse = try JSONDecoder().decode(model, from: responseData)
+                print(apiResponse)
                 DispatchQueue.main.async {
                     completion(apiResponse, nil)
                 }
@@ -76,7 +79,7 @@ extension NetworkManager {
     }
     
      func buildHeaders(from request: RequestProtocol) -> HTTPHeaders {
-        var requestClientHeaders: HTTPHeaders = headers ?? [:]
+        var requestClientHeaders: HTTPHeaders = clientHeaders ?? [:]
         request.headers?.forEach {
             requestClientHeaders[$0.key] = $0.value
         }
@@ -95,16 +98,20 @@ extension NetworkManager {
         request.httpMethod = endPoint.httpMethode.rawValue
         guard let url = request.url else {throw NetworkRequestError.missingURL}
         guard var urlComponents = URLComponents(url: url,
-                                                resolvingAgainstBaseURL: false),
-            !endPoint.parameters.isEmpty else { return request}
-        urlComponents.setQueryItems(with: endPoint.parameters)
+                                                resolvingAgainstBaseURL: false) else { return request }
+        var fullRequestparameters = clientParameters
+        endPoint.parameters.forEach {
+            fullRequestparameters[$0.key] = "\($0.value)"
+        }
+        urlComponents.setQueryItems(with: fullRequestparameters)
+        
         request.url = urlComponents.url
         return request
     }
     
 }
 extension URLComponents {
-    mutating func setQueryItems(with parameters: [String: Any]) {
+    mutating func setQueryItems(with parameters: [String: String]) {
         self.queryItems = parameters.map { URLQueryItem(name: $0.key,
                                                         value: "\($0.value)")
         }

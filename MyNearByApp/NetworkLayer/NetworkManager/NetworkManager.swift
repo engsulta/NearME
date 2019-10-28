@@ -13,7 +13,9 @@ protocol NetworkManagerProtocol {
     /// The URL of the EndPoint at the server.
     var baseUrl: String { get }
     /// A dictionary containing all the Client Related HTTP header fields (default: nil)
-    var headers: [String: String]? { get }
+    var clientHeaders: HTTPHeaders? {get}
+    /// client specific parameters like auth parameters
+    var clientParameters: [String: String] { get }
     /// The session used during HTTP request (default: URLSession.shared)
     var session: URLSessionProtocol { get }
     ///start network execution to start http request implemented in default extension to concrete client
@@ -24,9 +26,8 @@ protocol NetworkManagerProtocol {
 class NetworkManager: NetworkManagerProtocol {
     var baseUrl: String
     var session: URLSessionProtocol
-   
     /// create default headers per any network request
-    var headers: [String: String]? {
+    var clientParameters: [String: String] {
         let clientID = Bundle.main.object(forInfoDictionaryKey: NetworkKeys.clientIDKey) as? String ?? NetworkKeys.clientID
         let clientSecret = Bundle.main.object(forInfoDictionaryKey: NetworkKeys.clientSecretKey) as? String ?? NetworkKeys.clientSecret
         let apiVersion = Bundle.main.object(forInfoDictionaryKey: NetworkKeys.apiVersionKey) as? String ?? NetworkKeys.apiVersion
@@ -35,6 +36,7 @@ class NetworkManager: NetworkManagerProtocol {
                 NetworkKeys.clientSecretKey: clientSecret,
                 NetworkKeys.apiVersionKey: apiVersion]
     }
+    var clientHeaders: HTTPHeaders? { return nil }
     static let shared: NetworkManager = {
         var serverURL:String = "https://api.foursquare.com"
         return NetworkManager(baseURL: serverURL)
