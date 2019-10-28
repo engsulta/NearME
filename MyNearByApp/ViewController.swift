@@ -12,7 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        /// jsut for testing that data recieved correctly
+       let venueUseCase = VenueListUseCase()
+        venueUseCase.fetcNearByVenues { (venues, error) in
+            if let error = error{
+                print(error.localizedDescription)
+            }else if let venues = venues{
+                print(venues)
+            }
+        }
     }
 
 

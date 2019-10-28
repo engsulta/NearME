@@ -27,13 +27,13 @@ class NetworkManager: NetworkManagerProtocol {
    
     /// create default headers per any network request
     var headers: [String: String]? {
-        let clientID = Bundle.main.object(forInfoDictionaryKey: "clientID") as? String ?? NetworkKeys.clientID
-        let clientSecret = Bundle.main.object(forInfoDictionaryKey: "clientID") as? String ?? NetworkKeys.clientSecret
-        let apiVersion = ""
+        let clientID = Bundle.main.object(forInfoDictionaryKey: NetworkKeys.clientIDKey) as? String ?? NetworkKeys.clientID
+        let clientSecret = Bundle.main.object(forInfoDictionaryKey: NetworkKeys.clientSecretKey) as? String ?? NetworkKeys.clientSecret
+        let apiVersion = Bundle.main.object(forInfoDictionaryKey: NetworkKeys.apiVersionKey) as? String ?? NetworkKeys.apiVersion
         
-        return [NetworkKeys.clientID: clientID,
-                NetworkKeys.clientSecret: clientSecret,
-                NetworkKeys.apiVersion: apiVersion]
+        return [NetworkKeys.clientIDKey: clientID,
+                NetworkKeys.clientSecretKey: clientSecret,
+                NetworkKeys.apiVersionKey: apiVersion]
     }
     static let shared: NetworkManager = {
         var serverURL:String = "https://api.foursquare.com"

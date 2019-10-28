@@ -31,9 +31,14 @@
 		3584D5DB2367404E00A3419E /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5D22367404E00A3419E /* Venue.swift */; };
 		3584D5DC2367404E00A3419E /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5D32367404E00A3419E /* Meta.swift */; };
 		3584D5DD2367404E00A3419E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5D42367404E00A3419E /* Response.swift */; };
-		3584D5DE2367404E00A3419E /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5D52367404E00A3419E /* APIResponse.swift */; };
+		3584D5DE2367404E00A3419E /* VenuResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5D52367404E00A3419E /* VenuResponse.swift */; };
 		3584D5DF2367404E00A3419E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5D62367404E00A3419E /* Category.swift */; };
 		3584D5E02367404E00A3419E /* LabeledLatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5D72367404E00A3419E /* LabeledLatLng.swift */; };
+		3584D5E62367466A00A3419E /* VenueListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5E52367466A00A3419E /* VenueListUseCase.swift */; };
+		3584D5E82367730A00A3419E /* VenuListDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5E72367730A00A3419E /* VenuListDataRepository.swift */; };
+		3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5ED236782DA00A3419E /* VenueListViewModel.swift */; };
+		3584D5F02367872100A3419E /* VenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5EF2367872100A3419E /* VenueListViewController.swift */; };
+		3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +80,14 @@
 		3584D5D22367404E00A3419E /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		3584D5D32367404E00A3419E /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		3584D5D42367404E00A3419E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		3584D5D52367404E00A3419E /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		3584D5D52367404E00A3419E /* VenuResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuResponse.swift; sourceTree = "<group>"; };
 		3584D5D62367404E00A3419E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3584D5D72367404E00A3419E /* LabeledLatLng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledLatLng.swift; sourceTree = "<group>"; };
+		3584D5E52367466A00A3419E /* VenueListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListUseCase.swift; sourceTree = "<group>"; };
+		3584D5E72367730A00A3419E /* VenuListDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuListDataRepository.swift; sourceTree = "<group>"; };
+		3584D5ED236782DA00A3419E /* VenueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewModel.swift; sourceTree = "<group>"; };
+		3584D5EF2367872100A3419E /* VenueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewController.swift; sourceTree = "<group>"; };
+		3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,7 @@
 		3584D58D2366E3C200A3419E /* MyNearByApp */ = {
 			isa = PBXGroup;
 			children = (
+				3584D5E1236745C800A3419E /* VenuListScreen */,
 				3584D5AE2366F9DB00A3419E /* NetworkLayer */,
 				3584D58E2366E3C200A3419E /* AppDelegate.swift */,
 				3584D5902366E3C200A3419E /* ViewController.swift */,
@@ -208,13 +219,57 @@
 				3584D5D22367404E00A3419E /* Venue.swift */,
 				3584D5D32367404E00A3419E /* Meta.swift */,
 				3584D5D42367404E00A3419E /* Response.swift */,
-				3584D5D52367404E00A3419E /* APIResponse.swift */,
+				3584D5D52367404E00A3419E /* VenuResponse.swift */,
 				3584D5D62367404E00A3419E /* Category.swift */,
 				3584D5D72367404E00A3419E /* LabeledLatLng.swift */,
 			);
 			name = Models;
 			path = MyNearByApp/NetworkLayer/Models;
 			sourceTree = SOURCE_ROOT;
+		};
+		3584D5E1236745C800A3419E /* VenuListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3584D5EC2367822B00A3419E /* VenuListBusinessUseCase */,
+				3584D5EB2367820300A3419E /* VenueListViewModel */,
+				3584D5EA236781F100A3419E /* VenueListViewController */,
+				3584D5E9236781D700A3419E /* VenueListStoryBoard */,
+				3584D5E72367730A00A3419E /* VenuListDataRepository.swift */,
+			);
+			path = VenuListScreen;
+			sourceTree = "<group>";
+		};
+		3584D5E9236781D700A3419E /* VenueListStoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VenueListStoryBoard;
+			sourceTree = "<group>";
+		};
+		3584D5EA236781F100A3419E /* VenueListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3584D5EF2367872100A3419E /* VenueListViewController.swift */,
+			);
+			path = VenueListViewController;
+			sourceTree = "<group>";
+		};
+		3584D5EB2367820300A3419E /* VenueListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3584D5ED236782DA00A3419E /* VenueListViewModel.swift */,
+				3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */,
+			);
+			path = VenueListViewModel;
+			sourceTree = "<group>";
+		};
+		3584D5EC2367822B00A3419E /* VenuListBusinessUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				3584D5E52367466A00A3419E /* VenueListUseCase.swift */,
+			);
+			path = VenuListBusinessUseCase;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -327,14 +382,19 @@
 				3584D5DD2367404E00A3419E /* Response.swift in Sources */,
 				3584D5DF2367404E00A3419E /* Category.swift in Sources */,
 				3584D5D82367404E00A3419E /* Location.swift in Sources */,
-				3584D5DE2367404E00A3419E /* APIResponse.swift in Sources */,
+				3584D5DE2367404E00A3419E /* VenuResponse.swift in Sources */,
+				3584D5F02367872100A3419E /* VenueListViewController.swift in Sources */,
 				3584D5912366E3C200A3419E /* ViewController.swift in Sources */,
 				3584D5B52366FFBD00A3419E /* NetworkManager.swift in Sources */,
+				3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */,
 				3584D5B32366FEA700A3419E /* NetworkDefaults.swift in Sources */,
 				3584D5DC2367404E00A3419E /* Meta.swift in Sources */,
 				3584D5E02367404E00A3419E /* LabeledLatLng.swift in Sources */,
 				3584D5D92367404E00A3419E /* Icon.swift in Sources */,
+				3584D5E82367730A00A3419E /* VenuListDataRepository.swift in Sources */,
+				3584D5E62367466A00A3419E /* VenueListUseCase.swift in Sources */,
 				3584D58F2366E3C200A3419E /* AppDelegate.swift in Sources */,
+				3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,10 +572,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				apiVersion = 20190425;
-				clientID = "";
-				clientSecret = CVCFAPEUDCS0LPR2VW14DIR2Z1KZAAZD23XVMN12YZEIEKER;
+				client_id = DANSQAPH5IIJRBMGPGWS3S4M1ZRKLRA4Z44A1UXFORE1SYNG;
+				client_secret = CVCFAPEUDCS0LPR2VW14DIR2Z1KZAAZD23XVMN12YZEIEKER;
 				serverURL = "https://api.foursquare.com";
+				v = 20190425;
 			};
 			name = Debug;
 		};
@@ -534,10 +594,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				apiVersion = 20190425;
-				clientID = DANSQAPH5IIJRBMGPGWS3S4M1ZRKLRA4Z44A1UXFORE1SYNG;
-				clientSecret = CVCFAPEUDCS0LPR2VW14DIR2Z1KZAAZD23XVMN12YZEIEKER;
+				client_id = DANSQAPH5IIJRBMGPGWS3S4M1ZRKLRA4Z44A1UXFORE1SYNG;
+				client_secret = CVCFAPEUDCS0LPR2VW14DIR2Z1KZAAZD23XVMN12YZEIEKER;
 				serverURL = "https://api.foursquare.com";
+				v = 20190425;
 			};
 			name = Release;
 		};
