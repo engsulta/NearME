@@ -17,7 +17,7 @@ class NetworkErrorTest: XCTestCase {
 
         for (index, testError) in [
                                    NetworkRequestError.missingURL,
-                                   NetworkRequestError.encodingFailed,
+                                   NetworkRequestError.wrongData,
                                    NetworkRequestError.noInternetConnection].enumerated() {
                                     XCTAssertEqual(testError.rawValue, expected[index])
         }

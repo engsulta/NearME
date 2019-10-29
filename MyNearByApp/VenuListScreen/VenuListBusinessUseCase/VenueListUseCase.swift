@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 struct DefaultPlace {
     static let lat: Float = 29.962696
     static let lon: Float = 31.276941
@@ -21,6 +22,10 @@ struct DefaultPlace {
 protocol UseCase {
     //var request: RequestProtocol? {get}
 }
+protocol LocationManagerProtocol {
+}
+extension CLLocationManager: LocationManagerProtocol{
+}
 
 struct VenusRequestKeys {
    static let latLongKey = "ll"
@@ -32,13 +37,16 @@ class VenueListUseCase: UseCase {
     var currentPlace : Place = Place(latitude:DefaultPlace.lat, longitude: DefaultPlace.lon )
     var searchRadius : Int = 1000
     var venuListRepo : VenuListDataRepositoryProtocol?
+    var locationManager: CLLocationManager?
     
     func setPlace(place: Place, searchRadius: Int){
         self.currentPlace = place
         self.searchRadius = searchRadius
     }
-    init(venuListRepo: VenuListDataRepositoryProtocol? = VenuListDataRepository()) {
+    init(venuListRepo: VenuListDataRepositoryProtocol? = VenuListDataRepository(), locationManager: CLLocationManager = CLLocationManager()) {
         self.venuListRepo = venuListRepo
+        self.locationManager = locationManager
+
     }
     func fetcNearByVenues(completion: @escaping NetworkCompletion) {
         venuListRepo?.fetcNearByVenues(around: currentPlace, with: searchRadius, completion: completion)

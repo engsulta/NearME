@@ -140,6 +140,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="b9d-bb-V7G" id="pmT-1k-PIZ"/>
                         <outlet property="currentMode" destination="Sf3-0B-6wT" id="zE7-Ld-bda"/>
+                        <outlet property="locationSwitchMode" destination="Biz-mi-NTy" id="Esu-DO-2lF"/>
                         <outlet property="tableView" destination="FHd-ov-9nv" id="M11-M1-M4v"/>
                     </connections>
                 </viewController>

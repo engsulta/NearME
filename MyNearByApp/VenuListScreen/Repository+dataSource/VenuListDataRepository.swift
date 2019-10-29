@@ -51,7 +51,7 @@ struct VenuListRemoteDataSource: VenuListDataSource {
     func fetcNearByVenues(around place: Place, with radius: Int, completion: @escaping NetworkCompletion){
        let request = NearByRequest(path: EndPoint.search.rawValue,
                       httpMethode: .get,
-                      parameters: [VenusRequestKeys.latLongKey: "2,3",
+                      parameters: [VenusRequestKeys.latLongKey: place.localizedDescription,
                                    VenusRequestKeys.intentKey: Intent.checkin.rawValue,
                                    "radius": radius])
         networkManager?.execute(request: request, model: VenueResponse.self, completion: completion)

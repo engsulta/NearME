@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		20A39F73DB1302920182CC94 /* Pods_MyNearByApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A9971D0B9960E69A150A9F /* Pods_MyNearByApp.framework */; };
+		3570B03B2368CE9200D069ED /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03A2368CE9200D069ED /* Message.swift */; };
+		3570B03D2368D1D400D069ED /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03C2368D1D400D069ED /* LocationManagerDelegate.swift */; };
+		3570B03F2368DA0A00D069ED /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03E2368DA0A00D069ED /* UserStore.swift */; };
 		3584D58F2366E3C200A3419E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D58E2366E3C200A3419E /* AppDelegate.swift */; };
 		3584D5912366E3C200A3419E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5902366E3C200A3419E /* ViewController.swift */; };
 		3584D5942366E3C200A3419E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3584D5922366E3C200A3419E /* Main.storyboard */; };
@@ -59,6 +62,9 @@
 		1B71D2279ECD82A28C94CFF9 /* Pods-MyNearByAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyNearByAppTests/Pods-MyNearByAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		23DBECD10B1054C02FA8A2AA /* Pods-MyNearByApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByApp.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByApp/Pods-MyNearByApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2928CEEB95113E3DE2C93ABD /* Pods-MyNearByApp-MyNearByAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByApp-MyNearByAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyNearByApp-MyNearByAppTests/Pods-MyNearByApp-MyNearByAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		3570B03A2368CE9200D069ED /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3570B03C2368D1D400D069ED /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
+		3570B03E2368DA0A00D069ED /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		3584D58B2366E3C200A3419E /* MyNearByApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNearByApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3584D58E2366E3C200A3419E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3584D5902366E3C200A3419E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 				3584D5952366E3C300A3419E /* Assets.xcassets */,
 				3584D5972366E3C300A3419E /* LaunchScreen.storyboard */,
 				3584D59A2366E3C300A3419E /* Info.plist */,
+				3570B03E2368DA0A00D069ED /* UserStore.swift */,
 			);
 			path = MyNearByApp;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 				3584D5EB2367820300A3419E /* VenueListViewModel */,
 				3584D5EA236781F100A3419E /* VenueListViewController */,
 				3584D5E9236781D700A3419E /* VenueListStoryBoard */,
+				3570B03A2368CE9200D069ED /* Message.swift */,
 			);
 			path = VenuListScreen;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				3584D5EF2367872100A3419E /* VenueListViewController.swift */,
+				3570B03C2368D1D400D069ED /* LocationManagerDelegate.swift */,
 			);
 			path = VenueListViewController;
 			sourceTree = "<group>";
@@ -522,12 +531,15 @@
 				3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */,
 				3584D5B32366FEA700A3419E /* NetworkDefaults.swift in Sources */,
 				3584D5DC2367404E00A3419E /* Meta.swift in Sources */,
+				3570B03F2368DA0A00D069ED /* UserStore.swift in Sources */,
 				3584D5E02367404E00A3419E /* LabeledLatLng.swift in Sources */,
+				3570B03B2368CE9200D069ED /* Message.swift in Sources */,
 				3584D5D92367404E00A3419E /* Icon.swift in Sources */,
 				3584D5E82367730A00A3419E /* VenuListDataRepository.swift in Sources */,
 				3584D5E62367466A00A3419E /* VenueListUseCase.swift in Sources */,
 				3584D58F2366E3C200A3419E /* AppDelegate.swift in Sources */,
 				3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */,
+				3570B03D2368D1D400D069ED /* LocationManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

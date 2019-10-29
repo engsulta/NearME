@@ -10,23 +10,6 @@ import Foundation
 import UIKit
 import CoreLocation
 
-struct Message {
-    var messageTxt: String
-    var messageImage: UIImage
-    init(error: NetworkRequestError) {
-        switch error {
-        case .noInternetConnection:
-            self.messageTxt = "Something Wrong"
-            self.messageImage = UIImage(named: "noInternetConnection") ?? UIImage()
-        case .wrongData:
-            self.messageTxt = "No available Venues in your place"
-            self.messageImage = UIImage(named: "wrongData") ?? UIImage()
-        default:
-            self.messageTxt = "No available Venues in your place"
-            self.messageImage = UIImage(named: "wrongData") ?? UIImage()
-        }
-    }
-}
 class VenueListViewModel {
     /// use case will handle any business logic
     let venueUseCase: VenueListUseCase?
@@ -56,10 +39,15 @@ class VenueListViewModel {
     var numberOfCells: Int {
         return cellViewModels.count
     }
-    
+    var locationSwitchStatus: Bool = false {
+        didSet{
+            switchModeClosure?(locationSwitchStatus)
+        }
+    }
     var reloadTableViewClosure: (()->())?
     var showWarningClosure: (()->())?
     var updateLoadingStatus: (()->())?
+    var switchModeClosure: ((Bool) -> ())?
     
     init(venueUseCase: VenueListUseCase = VenueListUseCase()) {
         self.venueUseCase = venueUseCase
@@ -117,6 +105,11 @@ class VenueListViewModel {
     }
 }
 
+extension VenueListViewModel{
+    func switchModePressed(status: Bool){
+       
+    }
+}
 struct VenueListCellViewModel {
     let titleText: String
     let addressText: String
