@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct VenuResponse : Codable {
+struct VenueResponse : Codable {
 
 	let meta : Meta?
 	let response : Response?

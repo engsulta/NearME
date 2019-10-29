@@ -24,7 +24,7 @@ struct Category : Codable {
 	}
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		icon = try Icon(from: decoder)
+		icon = try values.decodeIfPresent(Icon.self, forKey: .icon)
 		id = try values.decodeIfPresent(String.self, forKey: .id)
 		name = try values.decodeIfPresent(String.self, forKey: .name)
 		pluralName = try values.decodeIfPresent(String.self, forKey: .pluralName)

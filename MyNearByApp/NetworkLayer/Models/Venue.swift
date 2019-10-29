@@ -9,7 +9,7 @@ struct Venue : Codable {
 	let categories : [Category]?
 	let hasPerk : Bool?
 	let id : String?
-	let location : Location?
+	let location : Location!
 	let name : String?
 	let referralId : String?
 	let venuePage : VenuePage?
@@ -19,20 +19,25 @@ struct Venue : Codable {
 		case categories = "categories"
 		case hasPerk = "hasPerk"
 		case id = "id"
-		case location
+		case location = "location"
 		case name = "name"
 		case referralId = "referralId"
 		case venuePage
 	}
 	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
+        if let values = try? decoder.container(keyedBy: CodingKeys.self){
 		categories = try values.decodeIfPresent([Category].self, forKey: .categories)
 		hasPerk = try values.decodeIfPresent(Bool.self, forKey: .hasPerk)
 		id = try values.decodeIfPresent(String.self, forKey: .id)
-		location = try Location(from: decoder)
+		location = try values.decodeIfPresent(Location.self, forKey: .location)
 		name = try values.decodeIfPresent(String.self, forKey: .name)
 		referralId = try values.decodeIfPresent(String.self, forKey: .referralId)
-		venuePage = try VenuePage(from: decoder)
+            venuePage = try values.decodeIfPresent(VenuePage.self, forKey: .venuePage)
+    
+        }else {
+            let context = DecodingError.Context.init(codingPath: decoder.codingPath, debugDescription: "Unable to decode coordinates!")
+            throw DecodingError.dataCorrupted(context)
+        }
 	}
 
 

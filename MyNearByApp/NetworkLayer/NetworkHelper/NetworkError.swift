@@ -10,7 +10,7 @@ import Foundation
 
 public enum NetworkRequestError: String, Error {
     case missingURL = "missing URL"
-    case encodingFailed = "encodingFailed"
+    case wrongData = "encodingFailed"
     case noInternetConnection = "no Internet Connection"
 }
 public enum NetworkResponse: String, Error {

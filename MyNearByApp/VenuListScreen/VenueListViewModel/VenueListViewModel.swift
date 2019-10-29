@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 struct Message {
     var messageTxt: String
@@ -15,11 +16,14 @@ struct Message {
     init(error: NetworkRequestError) {
         switch error {
         case .noInternetConnection:
-            self.messageTxt = ""
-            self.messageImage = UIImage()
+            self.messageTxt = "Something Wrong"
+            self.messageImage = UIImage(named: "noInternetConnection") ?? UIImage()
+        case .wrongData:
+            self.messageTxt = "No available Venues in your place"
+            self.messageImage = UIImage(named: "wrongData") ?? UIImage()
         default:
-            self.messageTxt = ""
-            self.messageImage = UIImage()
+            self.messageTxt = "No available Venues in your place"
+            self.messageImage = UIImage(named: "wrongData") ?? UIImage()
         }
     }
 }
@@ -61,22 +65,28 @@ class VenueListViewModel {
         self.venueUseCase = venueUseCase
     }
     
-    func initFetch() {
+    func initFetch(around place: CLLocationCoordinate2D) {
         self.isLoading = true
         ///ask use case to get user save location
         // get location and setup notification to refetch with region
         /// ask use case to fetch places
-        venueUseCase?.setPlace(place: Place(latitude: DefaultPlace.lat, longitude: DefaultPlace.lon), searchRadius: 1000)
+        venueUseCase?.setPlace(place: Place(latitude: Float(place.latitude), longitude: Float(place.longitude)), searchRadius: 1000)
         venueUseCase?.fetcNearByVenues(completion: {[weak self] (venues, error) in
             // stop loading
             self?.isLoading = false
             // check error and if there is error set warning message View
-            if let error = error {
-                self?.warningMessage = Message(error: error as! NetworkRequestError)
+            if error != nil {
+                self?.warningMessage = Message(error: .noInternetConnection)
             } else {
                 //  if there are venues process fetched venues
                 // catch Venue from response venue
-                self?.processFetchedVenue(venues: venues as! [Venue])
+                if let venuesResponse =  venues as? VenueResponse,
+                    let venuesModel = venuesResponse.response?.venues, !venuesModel.isEmpty{
+                    self?.processFetchedVenue(venues: venuesModel)
+                }else{
+                    self?.warningMessage = Message(error: .wrongData)
+                }
+                
             }
         })
     }
@@ -89,13 +99,12 @@ class VenueListViewModel {
     func createCellViewModel( venue: Venue ) -> VenueListCellViewModel {
         
         //Wrap a description
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        
-        return VenueListCellViewModel( titleText: venue.name ?? "",
-                                       descText: venue.location?.state ?? "",
-                                       imageUrl: "",
-                                       dateText: "" )
+        let name = venue.name ?? ""
+        let address = venue.location?.address ?? ""
+        let imageURL = "\((venue.categories?.first?.icon?.prefix) ?? "")500x500\((venue.categories?.first?.icon?.suffix) ?? "")"
+        return VenueListCellViewModel( titleText: name ,
+                                       addressText: address,
+                                       imageUrl: imageURL)
     }
     
     private func processFetchedVenue( venues: [Venue] ) {
@@ -110,7 +119,6 @@ class VenueListViewModel {
 
 struct VenueListCellViewModel {
     let titleText: String
-    let descText: String
+    let addressText: String
     let imageUrl: String
-    let dateText: String
 }

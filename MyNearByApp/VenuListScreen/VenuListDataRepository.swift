@@ -54,7 +54,7 @@ struct VenuListRemoteDataSource: VenuListDataSource {
                       parameters: [VenusRequestKeys.latLongKey: place.localizedDescription,
                                    VenusRequestKeys.intentKey: Intent.checkin.rawValue,
                                    "radius": radius])
-        networkManager?.execute(request: request, model: VenuResponse.self, completion: completion)
+        networkManager?.execute(request: request, model: VenueResponse.self, completion: completion)
     }
 }
 
