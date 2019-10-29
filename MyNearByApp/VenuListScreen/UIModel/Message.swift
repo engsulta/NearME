@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 struct Message {
     var messageTxt: String
     var messageImage: UIImage

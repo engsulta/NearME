@@ -11,8 +11,11 @@
 		3570B03B2368CE9200D069ED /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03A2368CE9200D069ED /* Message.swift */; };
 		3570B03D2368D1D400D069ED /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03C2368D1D400D069ED /* LocationManagerDelegate.swift */; };
 		3570B03F2368DA0A00D069ED /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03E2368DA0A00D069ED /* UserStore.swift */; };
+		3570B0432368E5C600D069ED /* VenueListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B0422368E5C600D069ED /* VenueListCellViewModel.swift */; };
+		3570B0452368E63300D069ED /* UseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B0442368E63300D069ED /* UseCaseTests.swift */; };
+		3570B0492368E97300D069ED /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B0482368E97300D069ED /* RepositoryTests.swift */; };
+		3570B04C2368EB8C00D069ED /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B04B2368EB8C00D069ED /* DataSourceTests.swift */; };
 		3584D58F2366E3C200A3419E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D58E2366E3C200A3419E /* AppDelegate.swift */; };
-		3584D5912366E3C200A3419E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5902366E3C200A3419E /* ViewController.swift */; };
 		3584D5942366E3C200A3419E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3584D5922366E3C200A3419E /* Main.storyboard */; };
 		3584D5962366E3C300A3419E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3584D5952366E3C300A3419E /* Assets.xcassets */; };
 		3584D5992366E3C300A3419E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3584D5972366E3C300A3419E /* LaunchScreen.storyboard */; };
@@ -43,7 +46,6 @@
 		3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5ED236782DA00A3419E /* VenueListViewModel.swift */; };
 		3584D5F02367872100A3419E /* VenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5EF2367872100A3419E /* VenueListViewController.swift */; };
 		3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */; };
-		35FB127A2368531D005842C1 /* BasketLoop.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 35FB12792368531D005842C1 /* BasketLoop.gpx */; };
 		B347FF27EEF2329A3466C939 /* Pods_MyNearByApp_MyNearByAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5B49B7DF74E968B43B8D74 /* Pods_MyNearByApp_MyNearByAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,9 +67,12 @@
 		3570B03A2368CE9200D069ED /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3570B03C2368D1D400D069ED /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 		3570B03E2368DA0A00D069ED /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		3570B0422368E5C600D069ED /* VenueListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListCellViewModel.swift; sourceTree = "<group>"; };
+		3570B0442368E63300D069ED /* UseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTests.swift; sourceTree = "<group>"; };
+		3570B0482368E97300D069ED /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		3570B04B2368EB8C00D069ED /* DataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
 		3584D58B2366E3C200A3419E /* MyNearByApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNearByApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3584D58E2366E3C200A3419E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3584D5902366E3C200A3419E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3584D5932366E3C200A3419E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3584D5952366E3C300A3419E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3584D5982366E3C300A3419E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +106,6 @@
 		3584D5ED236782DA00A3419E /* VenueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewModel.swift; sourceTree = "<group>"; };
 		3584D5EF2367872100A3419E /* VenueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewController.swift; sourceTree = "<group>"; };
 		3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListTableViewCell.swift; sourceTree = "<group>"; };
-		35FB12792368531D005842C1 /* BasketLoop.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BasketLoop.gpx; sourceTree = "<group>"; };
 		40B66C62A529BF86CE92E611 /* Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByApp-MyNearByAppTests/Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88A9971D0B9960E69A150A9F /* Pods_MyNearByApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNearByApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B236D7F3136367576A9331D3 /* Pods-MyNearByAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByAppTests/Pods-MyNearByAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +153,49 @@
 			path = "Repository+dataSource";
 			sourceTree = "<group>";
 		};
+		3570B0402368E56400D069ED /* AppAssets */ = {
+			isa = PBXGroup;
+			children = (
+				3570B03E2368DA0A00D069ED /* UserStore.swift */,
+				3584D58E2366E3C200A3419E /* AppDelegate.swift */,
+				3584D5952366E3C300A3419E /* Assets.xcassets */,
+			);
+			path = AppAssets;
+			sourceTree = "<group>";
+		};
+		3570B0412368E59600D069ED /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				3570B03A2368CE9200D069ED /* Message.swift */,
+				3570B0422368E5C600D069ED /* VenueListCellViewModel.swift */,
+			);
+			path = UIModel;
+			sourceTree = "<group>";
+		};
+		3570B0462368E63800D069ED /* UseCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				3570B0442368E63300D069ED /* UseCaseTests.swift */,
+			);
+			path = UseCaseTests;
+			sourceTree = "<group>";
+		};
+		3570B0472368E95400D069ED /* RepoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3570B0482368E97300D069ED /* RepositoryTests.swift */,
+			);
+			path = RepoTests;
+			sourceTree = "<group>";
+		};
+		3570B04A2368EB6A00D069ED /* DataSourceTests */ = {
+			isa = PBXGroup;
+			children = (
+				3570B04B2368EB8C00D069ED /* DataSourceTests.swift */,
+			);
+			path = DataSourceTests;
+			sourceTree = "<group>";
+		};
 		3584D5822366E3C200A3419E = {
 			isa = PBXGroup;
 			children = (
@@ -172,16 +219,10 @@
 		3584D58D2366E3C200A3419E /* MyNearByApp */ = {
 			isa = PBXGroup;
 			children = (
-				3584D5E1236745C800A3419E /* VenuListScreen */,
 				3584D5AE2366F9DB00A3419E /* NetworkLayer */,
-				3584D58E2366E3C200A3419E /* AppDelegate.swift */,
-				3584D5902366E3C200A3419E /* ViewController.swift */,
-				3584D5922366E3C200A3419E /* Main.storyboard */,
-				35FB12792368531D005842C1 /* BasketLoop.gpx */,
-				3584D5952366E3C300A3419E /* Assets.xcassets */,
-				3584D5972366E3C300A3419E /* LaunchScreen.storyboard */,
+				3584D5E1236745C800A3419E /* VenuListScreen */,
+				3570B0402368E56400D069ED /* AppAssets */,
 				3584D59A2366E3C300A3419E /* Info.plist */,
-				3570B03E2368DA0A00D069ED /* UserStore.swift */,
 			);
 			path = MyNearByApp;
 			sourceTree = "<group>";
@@ -189,6 +230,9 @@
 		3584D5A22366E3C300A3419E /* MyNearByAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3570B04A2368EB6A00D069ED /* DataSourceTests */,
+				3570B0472368E95400D069ED /* RepoTests */,
+				3570B0462368E63800D069ED /* UseCaseTests */,
 				3584D5AF2366F9E600A3419E /* NetworkLayerTests */,
 				3584D5A32366E3C300A3419E /* MyNearByAppTests.swift */,
 				3584D5A52366E3C300A3419E /* Info.plist */,
@@ -275,12 +319,12 @@
 		3584D5E1236745C800A3419E /* VenuListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3570B0412368E59600D069ED /* UIModel */,
 				3570B0392368CBF100D069ED /* Repository+dataSource */,
 				3584D5EC2367822B00A3419E /* VenuListBusinessUseCase */,
 				3584D5EB2367820300A3419E /* VenueListViewModel */,
 				3584D5EA236781F100A3419E /* VenueListViewController */,
 				3584D5E9236781D700A3419E /* VenueListStoryBoard */,
-				3570B03A2368CE9200D069ED /* Message.swift */,
 			);
 			path = VenuListScreen;
 			sourceTree = "<group>";
@@ -288,6 +332,8 @@
 		3584D5E9236781D700A3419E /* VenueListStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				3584D5922366E3C200A3419E /* Main.storyboard */,
+				3584D5972366E3C300A3419E /* LaunchScreen.storyboard */,
 			);
 			path = VenueListStoryBoard;
 			sourceTree = "<group>";
@@ -415,7 +461,6 @@
 				3584D5992366E3C300A3419E /* LaunchScreen.storyboard in Resources */,
 				3584D5962366E3C300A3419E /* Assets.xcassets in Resources */,
 				3584D5942366E3C200A3419E /* Main.storyboard in Resources */,
-				35FB127A2368531D005842C1 /* BasketLoop.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +571,6 @@
 				3584D5D82367404E00A3419E /* Location.swift in Sources */,
 				3584D5DE2367404E00A3419E /* VenueResponse.swift in Sources */,
 				3584D5F02367872100A3419E /* VenueListViewController.swift in Sources */,
-				3584D5912366E3C200A3419E /* ViewController.swift in Sources */,
 				3584D5B52366FFBD00A3419E /* NetworkManager.swift in Sources */,
 				3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */,
 				3584D5B32366FEA700A3419E /* NetworkDefaults.swift in Sources */,
@@ -538,6 +582,7 @@
 				3584D5E82367730A00A3419E /* VenuListDataRepository.swift in Sources */,
 				3584D5E62367466A00A3419E /* VenueListUseCase.swift in Sources */,
 				3584D58F2366E3C200A3419E /* AppDelegate.swift in Sources */,
+				3570B0432368E5C600D069ED /* VenueListCellViewModel.swift in Sources */,
 				3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */,
 				3570B03D2368D1D400D069ED /* LocationManagerDelegate.swift in Sources */,
 			);
@@ -550,6 +595,9 @@
 				3584D5CA23672A3100A3419E /* URLSessionMock.swift in Sources */,
 				3584D5C6236729B000A3419E /* NetworkLoggerTests.swift in Sources */,
 				3584D5C4236728C500A3419E /* NetworkErrorTest.swift in Sources */,
+				3570B04C2368EB8C00D069ED /* DataSourceTests.swift in Sources */,
+				3570B0492368E97300D069ED /* RepositoryTests.swift in Sources */,
+				3570B0452368E63300D069ED /* UseCaseTests.swift in Sources */,
 				3584D5C22367271F00A3419E /* HTTPResponseTests.swift in Sources */,
 				3584D5A42366E3C300A3419E /* MyNearByAppTests.swift in Sources */,
 				3584D5CD23673AD800A3419E /* RequestProtocolTests.swift in Sources */,
