@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -132,8 +132,15 @@
 				40B66C62A529BF86CE92E611 /* Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig */,
 				2928CEEB95113E3DE2C93ABD /* Pods-MyNearByApp-MyNearByAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3570B0392368CBF100D069ED /* Repository+dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3584D5E72367730A00A3419E /* VenuListDataRepository.swift */,
+			);
+			path = "Repository+dataSource";
 			sourceTree = "<group>";
 		};
 		3584D5822366E3C200A3419E = {
@@ -261,11 +268,11 @@
 		3584D5E1236745C800A3419E /* VenuListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3570B0392368CBF100D069ED /* Repository+dataSource */,
 				3584D5EC2367822B00A3419E /* VenuListBusinessUseCase */,
 				3584D5EB2367820300A3419E /* VenueListViewModel */,
 				3584D5EA236781F100A3419E /* VenueListViewController */,
 				3584D5E9236781D700A3419E /* VenueListStoryBoard */,
-				3584D5E72367730A00A3419E /* VenuListDataRepository.swift */,
 			);
 			path = VenuListScreen;
 			sourceTree = "<group>";

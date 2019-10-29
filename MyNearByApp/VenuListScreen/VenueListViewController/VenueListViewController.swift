@@ -119,9 +119,11 @@ class VenueListViewController: UIViewController {
     func showWarning( _ message: Message ) {
         let view = UIView(frame: self.view.frame)
         view.backgroundColor = .white
-        let alert = UIAlertController(title: "Alert", message: message.messageTxt, preferredStyle: .alert)
-        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: message.messageTxt, message: message.messageTxt, preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
+    }
+    func hideWarning(){
+       self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func switchMode(_ sender: UISwitch) {
@@ -133,12 +135,6 @@ class VenueListViewController: UIViewController {
             mode = .signle
             // stop updating location
         }
-    }
-    func showWarningView(){
-     //   warningViewHeightConstraint.constant = 500
-    }
-    func hideWarningView(){
-     //   warningViewHeightConstraint.constant = 0
     }
 }
 
