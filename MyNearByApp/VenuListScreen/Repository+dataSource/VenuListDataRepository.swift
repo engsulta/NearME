@@ -18,7 +18,7 @@ protocol VenuListDataRepositoryProtocol {
 /// concrete implementation to repository
 class VenuListDataRepository: VenuListDataRepositoryProtocol {
     func fetcVenuePhoto(withId venueId: String, completion: @escaping NetworkCompletion) {
-        //
+        remoteDataSource.fetcVenuePhoto(withId: venueId, completion: completion)
     }
     func fetcNearByVenues(around place: Place, with radius: Int, completion: @escaping NetworkCompletion) {
         remoteDataSource.fetcNearByVenues(around: place, with: radius, completion: completion)
