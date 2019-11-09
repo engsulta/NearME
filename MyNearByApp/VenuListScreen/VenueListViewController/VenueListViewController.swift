@@ -148,6 +148,19 @@ extension VenueListViewController: UITableViewDelegate, UITableViewDataSource {
         return 200.0
     }
 }
+extension VenueListViewController {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? VenueListTableViewCell {
+            self.viewModel.display(cell: cell)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        guard let cell = cell as? VenueListTableViewCell else { return }
+        self.viewModel.endDisplay(cell: cell)
+    }
+}
 extension UITableView {
     func reloadData(completion: @escaping () -> Void) {
         UIView.animate(withDuration: 0, animations: { self.reloadData() })

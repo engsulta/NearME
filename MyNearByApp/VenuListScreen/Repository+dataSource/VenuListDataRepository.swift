@@ -65,7 +65,7 @@ struct VenuListRemoteDataSource: VenuListDataSource {
         let venueIdPath = EndPoint.venuePhoto.rawValue.replacingOccurrences(of: "{VENUE_ID}", with: "\(venueId)")
         let request = NearByRequest(path: venueIdPath,
                              httpMethode: .get)
-               networkManager?.execute(request: request, model: VenueResponse.self, completion: completion)
+        networkManager?.execute(request: request, model: VenueResponse.self, completion: completion)
     }
 }
 

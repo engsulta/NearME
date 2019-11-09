@@ -13,7 +13,7 @@ import CoreLocation
 class VenueListViewModel {
     /// use case will handle any business logic
     let venueUseCase: VenueListUseCase?
-    
+    var imageLoaderList: Set<ImageLoader>
     /// data model initialization
     private var venues: [Venue] = [Venue]()
     
@@ -82,17 +82,32 @@ class VenueListViewModel {
     func getCellViewModel( at indexPath: IndexPath ) -> VenueListCellViewModel {
         return cellViewModels[indexPath.row]
     }
-
+    func display(cell tableCell: VenueListTableViewCell ){
+        guard let veneuId = tableCell.venueListCellViewModel?.venueId else { return }
+        ImageLoader(with: veneuId, venueUseCase: self.venueUseCase) { (image) in
+            tableCell.cellImage = image
+        }
+    }
+    func endDisplay(cell tableCell: VenueListTableViewCell){
+        if let imageLoader = imageLoaderList.first(where: {(imageLoader) -> Bool in
+            return imageLoader.venueId == tableCell.venueListCellViewModel?.venueId
+               }){
+                   imageLoader.cancel()
+                   //imageLoaderList.remove(imageLoader)
+               }
+    }
     /// mapping venue to venue Cell VM
     func createCellViewModel( venue: Venue ) -> VenueListCellViewModel {
         
         //Wrap a description
         let name = venue.name ?? ""
         let address = venue.location?.address ?? ""
+        let venueId = venue.id ?? ""
        // let imageURL = "\((venue.categories?.first?.icon?.prefix) ?? "")500x500\((venue.categories?.first?.icon?.suffix) ?? "")"
         return VenueListCellViewModel( titleText: name ,
                                        addressText: address,
-                                       imageUrl: "")
+                                       imageUrl: "",
+                                       venueId: venueId)
     }
     
     private func processFetchedVenue( venues: [Venue] ) {

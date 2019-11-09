@@ -12,4 +12,5 @@ struct VenueListCellViewModel {
     let titleText: String
     let addressText: String
     let imageUrl: String
+    let venueId: String
 }
