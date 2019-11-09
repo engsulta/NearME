@@ -42,6 +42,10 @@
 		3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5ED236782DA00A3419E /* VenueListViewModel.swift */; };
 		3584D5F02367872100A3419E /* VenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5EF2367872100A3419E /* VenueListViewController.swift */; };
 		3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */; };
+		35DB08312377337D0078993E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB082C2377337D0078993E /* Photo.swift */; };
+		35DB08322377337D0078993E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB082D2377337D0078993E /* Item.swift */; };
+		35DB08332377337D0078993E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB082E2377337D0078993E /* Response.swift */; };
+		35DB08342377337D0078993E /* VenuePhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB082F2377337D0078993E /* VenuePhotoResponse.swift */; };
 		B347FF27EEF2329A3466C939 /* Pods_MyNearByApp_MyNearByAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5B49B7DF74E968B43B8D74 /* Pods_MyNearByApp_MyNearByAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,10 @@
 		3584D5ED236782DA00A3419E /* VenueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewModel.swift; sourceTree = "<group>"; };
 		3584D5EF2367872100A3419E /* VenueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewController.swift; sourceTree = "<group>"; };
 		3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListTableViewCell.swift; sourceTree = "<group>"; };
+		35DB082C2377337D0078993E /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		35DB082D2377337D0078993E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		35DB082E2377337D0078993E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		35DB082F2377337D0078993E /* VenuePhotoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuePhotoResponse.swift; sourceTree = "<group>"; };
 		40B66C62A529BF86CE92E611 /* Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByApp-MyNearByAppTests/Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88A9971D0B9960E69A150A9F /* Pods_MyNearByApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNearByApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B236D7F3136367576A9331D3 /* Pods-MyNearByAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByAppTests/Pods-MyNearByAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -290,7 +298,7 @@
 			path = Mocking;
 			sourceTree = "<group>";
 		};
-		3584D5CE2367404E00A3419E /* Models */ = {
+		3584D5CE2367404E00A3419E /* VenuesModels */ = {
 			isa = PBXGroup;
 			children = (
 				3584D5CF2367404E00A3419E /* Location.swift */,
@@ -299,14 +307,14 @@
 				3584D5D52367404E00A3419E /* VenueResponse.swift */,
 				3584D5D72367404E00A3419E /* LabeledLatLng.swift */,
 			);
-			name = Models;
-			path = MyNearByApp/VenuListScreen/Models;
+			name = VenuesModels;
+			path = MyNearByApp/VenuListScreen/Models/VenuesModels;
 			sourceTree = SOURCE_ROOT;
 		};
 		3584D5E1236745C800A3419E /* VenuListScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3584D5CE2367404E00A3419E /* Models */,
+				35DB08292377319C0078993E /* Models */,
 				3570B0412368E59600D069ED /* UIModel */,
 				3570B0392368CBF100D069ED /* Repository+dataSource */,
 				3584D5EC2367822B00A3419E /* VenuListBusinessUseCase */,
@@ -350,6 +358,26 @@
 				3584D5E52367466A00A3419E /* VenueListUseCase.swift */,
 			);
 			path = VenuListBusinessUseCase;
+			sourceTree = "<group>";
+		};
+		35DB08292377319C0078993E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35DB082A237731AA0078993E /* VenuePhotoModels */,
+				3584D5CE2367404E00A3419E /* VenuesModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		35DB082A237731AA0078993E /* VenuePhotoModels */ = {
+			isa = PBXGroup;
+			children = (
+				35DB082D2377337D0078993E /* Item.swift */,
+				35DB082C2377337D0078993E /* Photo.swift */,
+				35DB082E2377337D0078993E /* Response.swift */,
+				35DB082F2377337D0078993E /* VenuePhotoResponse.swift */,
+			);
+			path = VenuePhotoModels;
 			sourceTree = "<group>";
 		};
 		698122307A0BB3620DB4BA2B /* Frameworks */ = {
@@ -552,6 +580,7 @@
 				3584D5C023670E0000A3419E /* NetworkExtension.swift in Sources */,
 				3584D5BA2367012100A3419E /* URLSessionProtocol.swift in Sources */,
 				3584D5BC236702BB00A3419E /* NetworkError.swift in Sources */,
+				35DB08322377337D0078993E /* Item.swift in Sources */,
 				3584D5B12366FCE500A3419E /* EndPointRequest.swift in Sources */,
 				3584D5DD2367404E00A3419E /* VenueResponseContainer.swift in Sources */,
 				3584D5D82367404E00A3419E /* Location.swift in Sources */,
@@ -563,12 +592,15 @@
 				3570B03F2368DA0A00D069ED /* UserStore.swift in Sources */,
 				3584D5E02367404E00A3419E /* LabeledLatLng.swift in Sources */,
 				3570B03B2368CE9200D069ED /* Message.swift in Sources */,
+				35DB08312377337D0078993E /* Photo.swift in Sources */,
 				3584D5E82367730A00A3419E /* VenuListDataRepository.swift in Sources */,
 				3584D5E62367466A00A3419E /* VenueListUseCase.swift in Sources */,
 				3584D58F2366E3C200A3419E /* AppDelegate.swift in Sources */,
+				35DB08342377337D0078993E /* VenuePhotoResponse.swift in Sources */,
 				3570B0432368E5C600D069ED /* VenueListCellViewModel.swift in Sources */,
 				3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */,
 				3570B03D2368D1D400D069ED /* LocationManagerDelegate.swift in Sources */,
+				35DB08332377337D0078993E /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
