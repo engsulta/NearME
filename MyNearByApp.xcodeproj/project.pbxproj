@@ -235,7 +235,6 @@
 		3584D5AE2366F9DB00A3419E /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				3584D5CE2367404E00A3419E /* Models */,
 				3584D5B82367006400A3419E /* Request */,
 				3584D5B72367005500A3419E /* NetworkManager */,
 				3584D5B62367002E00A3419E /* NetworkHelper */,
@@ -301,12 +300,13 @@
 				3584D5D72367404E00A3419E /* LabeledLatLng.swift */,
 			);
 			name = Models;
-			path = MyNearByApp/NetworkLayer/Models;
+			path = MyNearByApp/VenuListScreen/Models;
 			sourceTree = SOURCE_ROOT;
 		};
 		3584D5E1236745C800A3419E /* VenuListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3584D5CE2367404E00A3419E /* Models */,
 				3570B0412368E59600D069ED /* UIModel */,
 				3570B0392368CBF100D069ED /* Repository+dataSource */,
 				3584D5EC2367822B00A3419E /* VenuListBusinessUseCase */,
