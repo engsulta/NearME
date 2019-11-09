@@ -89,10 +89,10 @@ class VenueListViewModel {
         //Wrap a description
         let name = venue.name ?? ""
         let address = venue.location?.address ?? ""
-        let imageURL = "\((venue.categories?.first?.icon?.prefix) ?? "")500x500\((venue.categories?.first?.icon?.suffix) ?? "")"
+       // let imageURL = "\((venue.categories?.first?.icon?.prefix) ?? "")500x500\((venue.categories?.first?.icon?.suffix) ?? "")"
         return VenueListCellViewModel( titleText: name ,
                                        addressText: address,
-                                       imageUrl: imageURL)
+                                       imageUrl: "")
     }
     
     private func processFetchedVenue( venues: [Venue] ) {

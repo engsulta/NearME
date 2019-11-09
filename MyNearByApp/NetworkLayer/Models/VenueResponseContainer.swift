@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct Response : Codable {
+struct VenueResponseContainer : Codable {
     
     let venues : [Venue]?
     
