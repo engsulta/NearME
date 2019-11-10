@@ -51,8 +51,8 @@ class VenueListUseCase: UseCase {
     func fetcNearByVenues(completion: @escaping NetworkCompletion) {
         venuListRepo?.fetcNearByVenues(around: currentPlace, with: searchRadius, completion: completion)
     }
-    func fetcVenuePhoto(completion: @escaping NetworkCompletion) {
-           venuListRepo?.fetcNearByVenues(around: currentPlace, with: searchRadius, completion: completion)
+    func fetcVenuePhoto(withId id: String, completion: @escaping NetworkCompletion){
+           venuListRepo?.fetcVenuePhoto(withId: id, completion: completion)
        }
     // TODO : get user current saved location
     

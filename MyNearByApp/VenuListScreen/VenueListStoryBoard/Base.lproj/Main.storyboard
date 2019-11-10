@@ -49,25 +49,22 @@
                                 <rect key="frame" x="0.0" y="128" width="414" height="734"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="venueCellIdentifier" rowHeight="150" id="BeG-4I-wDT" customClass="VenueListTableViewCell" customModule="MyNearByApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="venueCellIdentifier" rowHeight="170" id="BeG-4I-wDT" customClass="VenueListTableViewCell" customModule="MyNearByApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BeG-4I-wDT" id="Orp-qJ-xy8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVp-kr-278">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZL-oJ-TFY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                                         </imageView>
-                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xmL-RO-Kw8">
-                                                            <rect key="frame" x="197" y="65" width="20" height="20"/>
-                                                        </activityIndicatorView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzE-2e-0Ja">
-                                                            <rect key="frame" x="0.0" y="105" width="414" height="45"/>
+                                                            <rect key="frame" x="0.0" y="125" width="414" height="45"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLl-xi-phO">
                                                                     <rect key="frame" x="16" y="5" width="38" height="17"/>
@@ -93,6 +90,10 @@
                                                                 <constraint firstItem="Cnu-Pb-ODc" firstAttribute="top" secondItem="bLl-xi-phO" secondAttribute="bottom" constant="5" id="zc4-3u-tad"/>
                                                             </constraints>
                                                         </view>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xmL-RO-Kw8">
+                                                            <rect key="frame" x="188.5" y="66.5" width="37" height="37"/>
+                                                            <color key="color" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -126,7 +127,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ieN-h4-7Ny" firstAttribute="bottom" secondItem="FHd-ov-9nv" secondAttribute="bottom" priority="750" id="65B-cQ-TOK"/>
                             <constraint firstItem="xEA-JE-nTR" firstAttribute="leading" secondItem="ieN-h4-7Ny" secondAttribute="leading" id="MwP-iw-0G4"/>

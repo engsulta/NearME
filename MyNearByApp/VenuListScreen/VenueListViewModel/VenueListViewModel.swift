@@ -13,7 +13,7 @@ import CoreLocation
 class VenueListViewModel {
     /// use case will handle any business logic
     let venueUseCase: VenueListUseCase?
-    var imageLoaderList: Set<ImageLoader>
+    var imageLoaderList = Set<ImageLoader>()
     /// data model initialization
     private var venues: [Venue] = [Venue]()
     
@@ -84,8 +84,18 @@ class VenueListViewModel {
     }
     func display(cell tableCell: VenueListTableViewCell ){
         guard let veneuId = tableCell.venueListCellViewModel?.venueId else { return }
-        ImageLoader(with: veneuId, venueUseCase: self.venueUseCase) { (image) in
-            tableCell.cellImage = image
+        if let imageLoader = imageLoaderList.first(where: { (imageLoader) -> Bool in
+            return imageLoader.venueId == tableCell.venueListCellViewModel?.venueId && imageLoader.image != nil}){
+            OperationQueue.main.addOperation {
+                tableCell.cellImage = imageLoader.image
+            }
+        } else {
+            let imageLoader = ImageLoader(with: veneuId, venueUseCase: self.venueUseCase) { (image) in
+                OperationQueue.main.addOperation {
+                    tableCell.cellImage = image
+                }
+            }
+            imageLoaderList.insert(imageLoader)
         }
     }
     func endDisplay(cell tableCell: VenueListTableViewCell){

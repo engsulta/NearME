@@ -154,11 +154,9 @@ extension VenueListViewController {
             self.viewModel.display(cell: cell)
         }
     }
-    
-    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? VenueListTableViewCell else { return }
-        self.viewModel.endDisplay(cell: cell)
+                self.viewModel.endDisplay(cell: cell)
     }
 }
 extension UITableView {

@@ -22,8 +22,8 @@ struct NetworkKeys {
     static let clientIDKey = "client_id"
     static let clientSecretKey = "client_secret"
     static let apiVersionKey = "v"
-    static let clientID = "DANSQAPH5IIJRBMGPGWS3S4M1ZRKLRA4Z44A1UXFORE1SYNG"
-    static let clientSecret = "CVCFAPEUDCS0LPR2VW14DIR2Z1KZAAZD23XVMN12YZEIEKER"
+    static let clientID = "5ZAEXI4DAWUTFI2DCTI4JWWZNWYTLXFZPZK1EAR3ENHCRSLR"
+    static let clientSecret = "A5Y3BH1GFVIYARKTKIXKR1DMWOQYKBEV4HNP1TAXRMY4MFHB"
     static let apiVersion = "20190425"
 }
 
