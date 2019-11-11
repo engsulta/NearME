@@ -48,13 +48,14 @@ class VenueListViewController: UIViewController {
         super.viewDidLoad()
         
         initView()
-        
         initLocationSettings()
-
         initVM()
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         let currentPoint = fetchedRegionCenter
+         fetchedRegionCenter = currentPoint
+    }
     fileprivate func initLocationSettings() {
         locationManager = CLLocationManager()
         locationManager?.delegate = self

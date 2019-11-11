@@ -11,6 +11,10 @@ import UIKit
 class ErrorViewController: UIViewController{
     
     @IBOutlet weak var warningImage: UIImageView!
+    @IBAction func tryAgainPressed(_ sender: Any) {
+        dismiss(animated: true) {
+        }
+    }
     @IBOutlet weak var warningLabel: UILabel!
     func setupkErrorScreen(with message: Message){
         warningLabel?.text = message.messageTxt

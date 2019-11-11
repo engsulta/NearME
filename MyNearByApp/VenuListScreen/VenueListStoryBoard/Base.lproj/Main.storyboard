@@ -202,6 +202,15 @@
                                     <constraint firstAttribute="bottom" secondItem="OU4-8C-2sI" secondAttribute="bottom" id="h9Z-Ys-YR8"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-qr-JF9">
+                                <rect key="frame" x="289" y="785" width="97" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Try Again"/>
+                                <connections>
+                                    <action selector="tryAgainPressed:" destination="Uj1-ve-cBP" eventType="touchUpInside" id="5Mw-bn-ADG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
