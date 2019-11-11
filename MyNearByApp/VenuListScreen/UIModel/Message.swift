@@ -16,13 +16,21 @@ struct Message {
         switch error {
         case .noInternetConnection:
             self.messageTxt = "Something Wrong"
-            self.messageImage = UIImage(named: "noInternetConnection") ?? UIImage()
+            if #available(iOS 13.0, *) {
+                self.messageImage = UIImage(systemName: "exclamationmark.icloud") ?? UIImage()
+            } else {
+                self.messageImage = UIImage(named: "noInternetConnection") ?? UIImage()
+            }
         case .wrongData:
             self.messageTxt = "No available Venues in your place"
-            self.messageImage = UIImage(named: "wrongData") ?? UIImage()
+            if #available(iOS 13.0, *) {
+                self.messageImage = UIImage(systemName: "exclamationmark.triangle") ?? UIImage()
+            } else {
+                self.messageImage = UIImage(named: "cloud") ?? UIImage()
+            }
         default:
             self.messageTxt = "No available Venues in your place"
-            self.messageImage = UIImage(named: "wrongData") ?? UIImage()
+            self.messageImage = UIImage(named: "cloud") ?? UIImage()
         }
     }
 }

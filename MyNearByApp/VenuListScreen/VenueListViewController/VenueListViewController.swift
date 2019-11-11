@@ -115,8 +115,17 @@ class VenueListViewController: UIViewController {
     }
     
     private func showWarning( _ message: Message ) {
-        let alert = UIAlertController(title: message.messageTxt, message: message.messageTxt, preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
+        if let alert = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "errorViewController") as? ErrorViewController{
+            if #available(iOS 13, *){
+                alert.modalPresentationStyle = .fullScreen
+            }
+            self.present(alert, animated: true, completion: {
+                 alert.setupkErrorScreen(with: message)
+            })
+        } else {
+            let alert = UIAlertController(title: message.messageTxt, message: message.messageTxt, preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func switchMode(_ sender: UISwitch) {
