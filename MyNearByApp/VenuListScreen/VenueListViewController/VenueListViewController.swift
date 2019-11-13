@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class VenueListViewController: UIViewController {
+class VenueListViewController: UIViewController, Storyboarded {
+    weak var coordinatorDelegate: Coordinator?
     @IBOutlet weak var locationSwitchMode: UISwitch!
     @IBOutlet weak var currentMode: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -116,16 +117,8 @@ class VenueListViewController: UIViewController {
     }
     
     private func showWarning( _ message: Message ) {
-        if let alert = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "errorViewController") as? ErrorViewController{
-            if #available(iOS 13, *){
-                alert.modalPresentationStyle = .fullScreen
-            }
-            self.present(alert, animated: true, completion: {
-                 alert.setupkErrorScreen(with: message)
-            })
-        } else {
-            let alert = UIAlertController(title: message.messageTxt, message: message.messageTxt, preferredStyle: .alert)
-            self.present(alert, animated: true, completion: nil)
+        if let coordinatorDelegate = coordinatorDelegate as? MainCoordinator {
+            coordinatorDelegate.showWarningViewController(with: message)
         }
     }
     

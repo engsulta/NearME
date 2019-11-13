@@ -56,20 +56,10 @@ extension VenueListViewController: CLLocationManagerDelegate {
     }
     
     /// location delegate methods
-    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-//        if presentedViewController == nil {
-//            let alertController = UIAlertController(title: "Interesting Location Nearby", message: "You need to refresh you are out of \(region.identifier). Check it out!", preferredStyle: .alert)
-//            let alertAction = UIAlertAction(title: "OK", style: .default) {
-//                [weak self] action in
-//                self?.dismiss(animated: true, completion: nil)
-//            }
-//            alertController.addAction(alertAction)
-//            present(alertController, animated: false, completion: nil)
-//        }
         didExitFromRegion = true
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1MB-qa-crJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Venue List View Controller-->
         <scene sceneID="ouX-eN-bqW">
             <objects>
-                <viewController id="8cJ-T9-Z1C" customClass="VenueListViewController" customModule="MyNearByApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VenueListViewController" id="8cJ-T9-Z1C" customClass="VenueListViewController" customModule="MyNearByApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gPp-1K-WYc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,12 +170,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCf-DR-TpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215.9420289855072" y="-606.02678571428567"/>
+            <point key="canvasLocation" x="1014" y="-577"/>
         </scene>
         <!--Error View Controller-->
         <scene sceneID="RsX-Pd-11s">
             <objects>
-                <viewController storyboardIdentifier="errorViewController" id="Uj1-ve-cBP" customClass="ErrorViewController" customModule="MyNearByApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ErrorViewController" id="Uj1-ve-cBP" customClass="ErrorViewController" customModule="MyNearByApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t3E-I4-FYt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

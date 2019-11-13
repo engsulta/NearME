@@ -8,8 +8,8 @@
 
 import Foundation
 import UIKit
-class ErrorViewController: UIViewController{
-    
+class ErrorViewController: UIViewController, Storyboarded {
+    var coordinatorDelegate: Coordinator?
     @IBOutlet weak var warningImage: UIImageView!
     @IBAction func tryAgainPressed(_ sender: Any) {
         dismiss(animated: true) {
