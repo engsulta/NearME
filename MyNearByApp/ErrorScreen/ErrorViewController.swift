@@ -8,13 +8,15 @@
 
 import Foundation
 import UIKit
-class ErrorViewController: UIViewController, Storyboarded {
-    var coordinatorDelegate: Coordinator?
+
+class ErrorViewController: UIViewController, Storyboarded  {
+    weak var coordinatorDelegate: Coordinator?
+    
     @IBOutlet weak var warningImage: UIImageView!
     @IBAction func tryAgainPressed(_ sender: Any) {
-        dismiss(animated: true) {
-        }
+        coordinatorDelegate?.dismiss(animated: true)
     }
+    
     @IBOutlet weak var warningLabel: UILabel!
     func setupkErrorScreen(with message: Message){
         warningLabel?.text = message.messageTxt

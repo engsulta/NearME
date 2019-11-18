@@ -9,26 +9,34 @@
 import Foundation
 import UIKit
 
-class VenueListCoordinator: Coordinator {
-    var childCoordinators: [Coordinator]
-    var navigationController: UINavigationController
+// this is the main coordinator
+class VenueListCoordinator: NSObject, Coordinator {
+    var childCoordinators: [Coordinator] = []
+    var router: Router
+    var navigationController: UINavigationController?
     
-    init(navigationVC: UINavigationController) {
-        self.navigationController = navigationVC
-        self.childCoordinators = [Coordinator]()
+    required init(navigationRouter: Router) {
+        self.router = navigationRouter
+        super.init()
     }
-    /// each coordinator responsible for creation of the viewController itself + set its coordinator delegate with an object
-    func start() {
-        guard let venueListViewController = VenueListViewController.instantiate() else { return }
-        venueListViewController.coordinatorDelegate = self
-        navigationController.pushViewController(venueListViewController, animated: true)
+    
+    func present(animated: Bool,
+                 onCompletion: NavigationClosure?,
+                 onDismissed: NavigationClosure?) {
+        guard let venueListViewController = VenueListViewController.instantiate(delegate: self) else { return }
+        router.present(venueListViewController,
+                       animated: animated,
+                       onCompletion: onCompletion,
+                       onDismissed: onDismissed)
+        navigationController = UINavigationController()
     }
     
     /// handle error message transition
     func showWarningViewController(with message: Message) {
-        let childCoordinator = VenueListCoordinator(navigationVC: self.navigationController)
-        childCoordinators.append(childCoordinator)
-        childCoordinator.startScreen = ChildScreens.errorScreen(message: message)
-        childCoordinator.start()
+        if let parentVC = router.navigationController?.viewControllers.last {
+            let warningScreenCoordinator = WarningScreenCoordinator(navigationRouter: ModalNavigationRouter(parentViewController: parentVC))
+            warningScreenCoordinator.message = message
+            presentChild(warningScreenCoordinator, animated: true, onCompletion: nil)
+        }
     }
 }

@@ -11,24 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-    var coordinator: MainCoordinator?
+    public lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+    public lazy var router: AppDelegateRouter = AppDelegateRouter(window: window!)
+    public lazy var coordinator: Coordinator = VenueListCoordinator(navigationRouter: router)
+    //var coordinator: VenueListCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        initWindowWithCoordinator()
-        
+        coordinator.present(animated: true, onCompletion: nil, onDismissed: nil)
         return true
-    }
-    private func initWindowWithCoordinator(){
-        let navController = UINavigationController()
-        coordinator = MainCoordinator(navigationVC: navController)
-
-        // create a basic UIWindow and activate it
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navController
-        window?.makeKeyAndVisible()
-        coordinator?.start()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

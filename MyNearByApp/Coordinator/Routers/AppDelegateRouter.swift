@@ -11,7 +11,8 @@ public class AppDelegateRouter: Router {
     
     // MARK: - Instance Properties
     public let window: UIWindow
-   
+    public var navigationController: UINavigationController?
+
     // MARK: - Object Lifecycle
     public init(window: UIWindow) {
         self.window = window }
@@ -20,8 +21,10 @@ public class AppDelegateRouter: Router {
     // MARK: - Router
     public func present(_ viewController: UIViewController,
                         animated: Bool,
-                        onDismissed: (()->Void)?) {
-        window.rootViewController = viewController
+                        onCompletion: NavigationClosure?,
+                        onDismissed: NavigationClosure?) {
+        navigationController = UINavigationController(rootViewController: viewController)
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
     

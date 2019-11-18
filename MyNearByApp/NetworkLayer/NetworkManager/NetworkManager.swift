@@ -39,7 +39,13 @@ class NetworkManager: NetworkManagerProtocol {
     var clientHeaders: HTTPHeaders? { return nil }
     static let shared: NetworkManager = {
         var serverURL:String = "https://api.foursquare.com"
-        return NetworkManager(baseURL: serverURL)
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForResource = 10
+        if #available(iOS 11, *) {
+          configuration.waitsForConnectivity = true
+        }
+        let session = URLSession(configuration: configuration)
+        return NetworkManager(baseURL: serverURL, session: session)
     }()
     
     /// this is a non private init for implementing singletone plus design pattern so we can mock the network manager by creat mock instance with mock session and fake url

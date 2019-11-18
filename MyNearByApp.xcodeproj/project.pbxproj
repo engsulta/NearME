@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20A39F73DB1302920182CC94 /* Pods_MyNearByApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A9971D0B9960E69A150A9F /* Pods_MyNearByApp.framework */; };
+		353F3694237C4C4E00CA963D /* WarningScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F3693237C4C4E00CA963D /* WarningScreenCoordinator.swift */; };
+		3544D09923808B2F002924E7 /* ModalNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544D09823808B2F002924E7 /* ModalNavigationRouter.swift */; };
 		3570B03B2368CE9200D069ED /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03A2368CE9200D069ED /* Message.swift */; };
 		3570B03D2368D1D400D069ED /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03C2368D1D400D069ED /* LocationManagerDelegate.swift */; };
 		3570B03F2368DA0A00D069ED /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B03E2368DA0A00D069ED /* UserStore.swift */; };
@@ -42,6 +44,8 @@
 		3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5ED236782DA00A3419E /* VenueListViewModel.swift */; };
 		3584D5F02367872100A3419E /* VenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5EF2367872100A3419E /* VenueListViewController.swift */; };
 		3584D5F223678D3400A3419E /* VenueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */; };
+		35B18A7B237F576600D4DC04 /* AppDelegateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B18A7A237F576600D4DC04 /* AppDelegateRouter.swift */; };
+		35B18A7E237F578400D4DC04 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B18A7D237F578400D4DC04 /* NavigationRouter.swift */; };
 		35DB08312377337D0078993E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB082C2377337D0078993E /* Photo.swift */; };
 		35DB08322377337D0078993E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB082D2377337D0078993E /* Item.swift */; };
 		35DB08332377337D0078993E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB082E2377337D0078993E /* Response.swift */; };
@@ -50,7 +54,7 @@
 		35DB083823776F9D0078993E /* AsynchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB083723776F9C0078993E /* AsynchOperation.swift */; };
 		35DB083B237956350078993E /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB083A237956350078993E /* ErrorViewController.swift */; };
 		35DB083E2379BAAB0078993E /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB083D2379BAAB0078993E /* CoordinatorProtocol.swift */; };
-		35DB0840237AA7CF0078993E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB083F237AA7CF0078993E /* MainCoordinator.swift */; };
+		35DB0840237AA7CF0078993E /* VenueListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB083F237AA7CF0078993E /* VenueListCoordinator.swift */; };
 		B347FF27EEF2329A3466C939 /* Pods_MyNearByApp_MyNearByAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5B49B7DF74E968B43B8D74 /* Pods_MyNearByApp_MyNearByAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,8 @@
 		1B71D2279ECD82A28C94CFF9 /* Pods-MyNearByAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyNearByAppTests/Pods-MyNearByAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		23DBECD10B1054C02FA8A2AA /* Pods-MyNearByApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByApp.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByApp/Pods-MyNearByApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2928CEEB95113E3DE2C93ABD /* Pods-MyNearByApp-MyNearByAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByApp-MyNearByAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyNearByApp-MyNearByAppTests/Pods-MyNearByApp-MyNearByAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		353F3693237C4C4E00CA963D /* WarningScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningScreenCoordinator.swift; sourceTree = "<group>"; };
+		3544D09823808B2F002924E7 /* ModalNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationRouter.swift; sourceTree = "<group>"; };
 		3570B03A2368CE9200D069ED /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3570B03C2368D1D400D069ED /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 		3570B03E2368DA0A00D069ED /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 		3584D5ED236782DA00A3419E /* VenueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewModel.swift; sourceTree = "<group>"; };
 		3584D5EF2367872100A3419E /* VenueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewController.swift; sourceTree = "<group>"; };
 		3584D5F123678D3400A3419E /* VenueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListTableViewCell.swift; sourceTree = "<group>"; };
+		35B18A7A237F576600D4DC04 /* AppDelegateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateRouter.swift; sourceTree = "<group>"; };
+		35B18A7D237F578400D4DC04 /* NavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		35DB082C2377337D0078993E /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		35DB082D2377337D0078993E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		35DB082E2377337D0078993E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -115,7 +123,7 @@
 		35DB083723776F9C0078993E /* AsynchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchOperation.swift; sourceTree = "<group>"; };
 		35DB083A237956350078993E /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		35DB083D2379BAAB0078993E /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		35DB083F237AA7CF0078993E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		35DB083F237AA7CF0078993E /* VenueListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListCoordinator.swift; sourceTree = "<group>"; };
 		40B66C62A529BF86CE92E611 /* Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByApp-MyNearByAppTests/Pods-MyNearByApp-MyNearByAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88A9971D0B9960E69A150A9F /* Pods_MyNearByApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNearByApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B236D7F3136367576A9331D3 /* Pods-MyNearByAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNearByAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyNearByAppTests/Pods-MyNearByAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -374,6 +382,16 @@
 			path = VenuListBusinessUseCase;
 			sourceTree = "<group>";
 		};
+		35B18A7C237F576E00D4DC04 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				35B18A7D237F578400D4DC04 /* NavigationRouter.swift */,
+				35B18A7A237F576600D4DC04 /* AppDelegateRouter.swift */,
+				3544D09823808B2F002924E7 /* ModalNavigationRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
 		35DB08292377319C0078993E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,8 +423,10 @@
 		35DB083C2379BA940078993E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				35B18A7C237F576E00D4DC04 /* Routers */,
 				35DB083D2379BAAB0078993E /* CoordinatorProtocol.swift */,
-				35DB083F237AA7CF0078993E /* MainCoordinator.swift */,
+				35DB083F237AA7CF0078993E /* VenueListCoordinator.swift */,
+				353F3693237C4C4E00CA963D /* WarningScreenCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -618,18 +638,22 @@
 				3584D5D82367404E00A3419E /* Location.swift in Sources */,
 				3584D5DE2367404E00A3419E /* VenueResponse.swift in Sources */,
 				3584D5F02367872100A3419E /* VenueListViewController.swift in Sources */,
+				353F3694237C4C4E00CA963D /* WarningScreenCoordinator.swift in Sources */,
 				3584D5B52366FFBD00A3419E /* NetworkManager.swift in Sources */,
 				3584D5EE236782DA00A3419E /* VenueListViewModel.swift in Sources */,
-				35DB0840237AA7CF0078993E /* MainCoordinator.swift in Sources */,
+				35DB0840237AA7CF0078993E /* VenueListCoordinator.swift in Sources */,
+				35B18A7B237F576600D4DC04 /* AppDelegateRouter.swift in Sources */,
 				35DB083623776E0C0078993E /* ImageLoader.swift in Sources */,
 				3584D5B32366FEA700A3419E /* NetworkDefaults.swift in Sources */,
 				3570B03F2368DA0A00D069ED /* UserStore.swift in Sources */,
 				3584D5E02367404E00A3419E /* LabeledLatLng.swift in Sources */,
 				3570B03B2368CE9200D069ED /* Message.swift in Sources */,
 				35DB083E2379BAAB0078993E /* CoordinatorProtocol.swift in Sources */,
+				35B18A7E237F578400D4DC04 /* NavigationRouter.swift in Sources */,
 				35DB08312377337D0078993E /* Photo.swift in Sources */,
 				3584D5E82367730A00A3419E /* VenuListDataRepository.swift in Sources */,
 				3584D5E62367466A00A3419E /* VenueListUseCase.swift in Sources */,
+				3544D09923808B2F002924E7 /* ModalNavigationRouter.swift in Sources */,
 				35DB083B237956350078993E /* ErrorViewController.swift in Sources */,
 				3584D58F2366E3C200A3419E /* AppDelegate.swift in Sources */,
 				35DB08342377337D0078993E /* VenuePhotoResponse.swift in Sources */,

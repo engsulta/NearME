@@ -9,41 +9,32 @@
 import Foundation
 import UIKit
 
-enum ChildScreens {
-    case errorScreen(message: Message)
-    case anotherScreen
-}
 class WarningScreenCoordinator: Coordinator {
+    var childCoordinators: [Coordinator] = []
+    var router: Router
+    var message: Message?
     
-    var childCoordinators: [Coordinator]
-    var navigationController: UINavigationController
-    var startScreen: ChildScreens?
     
-    init(navigationVC: UINavigationController) {
-        self.navigationController = navigationVC
-        self.childCoordinators = [Coordinator]()
+    required init(navigationRouter: Router) {
+        self.router = navigationRouter
     }
     
-    func start() {
-        switch startScreen {
-        case let .errorScreen(message):
-            guard let errorViewController = ErrorViewController.instantiate() else { return }
-            errorViewController.coordinatorDelegate = self
-            
-            if #available(iOS 13, *){
-                errorViewController.modalPresentationStyle = .fullScreen
-                navigationController.present(errorViewController,
-                                             animated: true,
-                                             completion: {
-                                                errorViewController.setupkErrorScreen(with: message)
-                })
-            } else {
-                let errorViewController = UIAlertController(title: "message.messageTxt", message: "message.messageTxt", preferredStyle: .alert)
-                navigationController.present(errorViewController, animated: true, completion: nil)
-            }
-        default:
-            break
+    func present(animated: Bool,
+                 onCompletion: NavigationClosure?,
+                 onDismissed: (() -> Void)?) {
+
+        guard let errorViewController = ErrorViewController.instantiate(delegate: self) else { return }
+        let onComplete: NavigationClosure = {
+                        errorViewController.setupkErrorScreen(with: self.message ?? Message(error: .noInternetConnection))
+                   }
+        if #available(iOS 13, *){
+            errorViewController.modalPresentationStyle = .fullScreen
+            router.present(errorViewController,
+                           animated: true, onCompletion: onComplete,
+                           onDismissed: nil)
+        } else {
+            let errorViewController = UIAlertController(title: "message.messageTxt", message: "message.messageTxt", preferredStyle: .alert)
+            router.present(errorViewController, animated: true, onCompletion: onComplete, onDismissed: nil)
         }
     }
-    
 }

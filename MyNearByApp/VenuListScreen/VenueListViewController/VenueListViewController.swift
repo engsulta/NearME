@@ -11,7 +11,8 @@ import UIKit
 import CoreLocation
 
 class VenueListViewController: UIViewController, Storyboarded {
-    weak var coordinatorDelegate: Coordinator?
+    var coordinatorDelegate: Coordinator?
+    
     @IBOutlet weak var locationSwitchMode: UISwitch!
     @IBOutlet weak var currentMode: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -117,7 +118,7 @@ class VenueListViewController: UIViewController, Storyboarded {
     }
     
     private func showWarning( _ message: Message ) {
-        if let coordinatorDelegate = coordinatorDelegate as? MainCoordinator {
+        if let coordinatorDelegate = coordinatorDelegate as? VenueListCoordinator {
             coordinatorDelegate.showWarningViewController(with: message)
         }
     }
