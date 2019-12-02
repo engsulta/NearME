@@ -12,15 +12,13 @@ import UIKit
 public class ModalNavigationRouter: NSObject {
 
     public unowned let parentViewController: UIViewController
-    public var navigationController: UINavigationController? = UINavigationController()
-    private var onDismissForViewController:[UIViewController: (() -> Void)] = [:]
-    private var onCompletionForViewController: [UIViewController: () -> Void] = [:]
+    public var navigationController: CustomNavigationController? = CustomNavigationController()
     
     // MARK: - Object Lifecycle
     public init(parentViewController: UIViewController) {
         self.parentViewController = parentViewController
         super.init()
-        navigationController?.delegate = self
+        //navigationController?.delegate = self
     }
 }
 
@@ -32,8 +30,8 @@ extension ModalNavigationRouter: Router {
                         onCompletion: NavigationClosure?,
                         onDismissed: NavigationClosure?) {
         
-        onDismissForViewController[viewController] = onDismissed
-        onCompletionForViewController[viewController] = onCompletion
+        navigationController?.onDismissForViewController[viewController] = onDismissed
+        navigationController?.onCompletionForViewController[viewController] = onCompletion
         
         if navigationController?.viewControllers.count == 0 {
             presentModally(viewController,
@@ -75,30 +73,30 @@ extension ModalNavigationRouter: Router {
     }
     
     private func performOnDismissed(for viewController: UIViewController) {
-        if let onDismiss = onDismissForViewController[viewController] {
+        if let onDismiss = navigationController?.onDismissForViewController[viewController] {
         onDismiss()
-        onDismissForViewController[viewController] = nil
+        navigationController?.onDismissForViewController[viewController] = nil
         }
     }
     private func performOnCompletion(for viewController: UIViewController) {
-           guard let onCompletion = onCompletionForViewController[viewController] else { return }
+           guard let onCompletion = navigationController?.onCompletionForViewController[viewController] else { return }
            onCompletion()
-           onCompletionForViewController[viewController] = nil
+           navigationController?.onCompletionForViewController[viewController] = nil
        }
 }
-
-// MARK: - UINavigationControllerDelegate
-extension ModalNavigationRouter: UINavigationControllerDelegate {
-    public func navigationController(
-        _ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        /// on poping completed
-        if let dismissedViewController = navigationController.transitionCoordinator?.viewController(forKey: .from), !navigationController.viewControllers.contains(dismissedViewController) {
-            performOnDismissed(for: dismissedViewController)
-        }
-        
-        /// on pushing completed
-        if let presentedViewController = navigationController.transitionCoordinator?.viewController(forKey: .to), navigationController.viewControllers.contains(presentedViewController) {
-            performOnCompletion(for: presentedViewController)
-        }
-    }
-}
+//
+//// MARK: - UINavigationControllerDelegate
+//extension ModalNavigationRouter: UINavigationControllerDelegate {
+//    public func navigationController(
+//        _ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+//        /// on poping completed
+//        if let dismissedViewController = navigationController.transitionCoordinator?.viewController(forKey: .from), !navigationController.viewControllers.contains(dismissedViewController) {
+//            performOnDismissed(for: dismissedViewController)
+//        }
+//
+//        /// on pushing completed
+//        if let presentedViewController = navigationController.transitionCoordinator?.viewController(forKey: .to), navigationController.viewControllers.contains(presentedViewController) {
+//            performOnCompletion(for: presentedViewController)
+//        }
+//    }
+//}

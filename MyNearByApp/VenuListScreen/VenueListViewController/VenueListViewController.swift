@@ -10,14 +10,16 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class VenueListViewController: UIViewController, Storyboarded {
+class VenueListViewController: UIViewController, Storyboarded {    
     var coordinatorDelegate: Coordinator?
-    
+    weak var warningCoordinatorDelegate: WarningMessageDelegate?
+    weak var venueDetailsCoordinatorDelegate: DetailsViewDelegate?
     @IBOutlet weak var locationSwitchMode: UISwitch!
     @IBOutlet weak var currentMode: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var locationManager: CLLocationManager?
+    var venueImageView: UIImageView?
     var fetchedRegionCenter: CLLocationCoordinate2D? = nil {
         didSet{
             guard let fetchedRegionCenter = fetchedRegionCenter else {
@@ -34,17 +36,15 @@ class VenueListViewController: UIViewController, Storyboarded {
     }
     var mode: UserMode = .realTime {
         didSet{
-         if mode == .realTime && oldValue == .signle {
+            if mode == .realTime && oldValue == .signle {
                 fetchedRegionCenter = nil
             }
-        locationSwitchMode.setOn(mode == .realTime, animated: true)
-        currentMode.text = mode.rawValue
+            locationSwitchMode.setOn(mode == .realTime, animated: true)
+            currentMode.text = mode.rawValue
         }
     }
     // point of optimization we can use coordinator to inject this VM
-    lazy var viewModel: VenueListViewModel = {
-        return VenueListViewModel()
-    }()
+    var viewModel: VenueListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,9 +118,7 @@ class VenueListViewController: UIViewController, Storyboarded {
     }
     
     private func showWarning( _ message: Message ) {
-        if let coordinatorDelegate = coordinatorDelegate as? VenueListCoordinator {
-            coordinatorDelegate.showWarningViewController(with: message)
-        }
+        warningCoordinatorDelegate?.showWarningViewController(with: message)
     }
     
     @IBAction func switchMode(_ sender: UISwitch) {
@@ -133,7 +131,6 @@ extension VenueListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "venueCellIdentifier", for: indexPath) as? VenueListTableViewCell else {
             fatalError("Cell not exists in storyboard")
         }
-        
         let cellVM = viewModel.getCellViewModel( at: indexPath )
         cell.venueListCellViewModel = cellVM
         
@@ -150,6 +147,16 @@ extension VenueListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var cellVM = viewModel.getVenueDetailsVM(at: indexPath)
+        cellVM.image = UIImage(named: "noImage")
+        venueDetailsCoordinatorDelegate?.displayDetails(for: cellVM)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "venueCellIdentifier", for: indexPath) as? VenueListTableViewCell else {
+            fatalError("Cell not exists in storyboard")
+        }
+        venueImageView = (tableView.cellForRow(at: indexPath) as? VenueListTableViewCell)?.mainImageView
+        venueImageView = cell.mainImageView
     }
 }
 extension VenueListViewController {

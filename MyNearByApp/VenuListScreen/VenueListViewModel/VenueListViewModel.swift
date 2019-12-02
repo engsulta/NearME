@@ -23,7 +23,7 @@ class VenueListViewModel {
             self.reloadTableViewClosure?()
         }
     }
-    
+    private var detailsViewModels: [VenueDetailsViewModel] = [VenueDetailsViewModel]()
     var isLoading: Bool = false {
         didSet {
             self.updateLoadingStatus?()
@@ -98,6 +98,9 @@ class VenueListViewModel {
             imageLoaderList.insert(imageLoader)
         }
     }
+    func getVenueDetailsVM(at index: IndexPath) -> VenueDetailsViewModel {
+        detailsViewModels[index.row]
+    }
     func endDisplay(cell tableCell: VenueListTableViewCell){
         if let imageLoader = imageLoaderList.first(where: {(imageLoader) -> Bool in
             return imageLoader.venueId == tableCell.venueListCellViewModel?.venueId
@@ -105,6 +108,22 @@ class VenueListViewModel {
                    imageLoader.cancel()
                    //imageLoaderList.remove(imageLoader)
                }
+    }
+    /// mapping venue to venue details VM
+    func createDetailsViewModel(venue: Venue) -> VenueDetailsViewModel {
+        
+        let name = venue.name ?? ""
+        let address = venue.location?.address ?? ""
+        let city = venue.location?.city ?? ""
+        let lat = venue.location?.lat ?? 0
+        let long = venue.location?.lng ?? 0
+        return VenueDetailsViewModel(name: name,
+                                     address: address,
+                                     image: nil,
+                                     city: city,
+                                     lat: lat,
+                                     long: long)
+        
     }
     /// mapping venue to venue Cell VM
     func createCellViewModel( venue: Venue ) -> VenueListCellViewModel {
@@ -123,10 +142,13 @@ class VenueListViewModel {
     private func processFetchedVenue( venues: [Venue] ) {
         self.venues = venues // Cache
         var vms = [VenueListCellViewModel]()
+        var detailsVM = [VenueDetailsViewModel]()
         for venue in venues {
             vms.append( createCellViewModel(venue: venue) )
+            detailsVM.append ( createDetailsViewModel(venue: venue))
         }
         self.cellViewModels = vms
+        self.detailsViewModels = detailsVM
     }
 }
 
