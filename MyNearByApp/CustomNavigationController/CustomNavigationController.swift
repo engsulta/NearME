@@ -17,10 +17,9 @@ public protocol navigationDelegate {
 public class CustomNavigationController: UINavigationController {
     
     // MARK:- static private lets
-    private static let morningLevelOneImageName: String = "morning_bg_l1"
-    private static let morningLevelTwoImageName: String = "morning_bg_l2"
-    private static let eveningLevelOneImageName: String = "evening_bg_l1"
-    private static let eveningLevelTwoImageName: String = "evening_bg_l2"
+    private static let LevelOneImageName: String = "bg_l1"
+    private static let LevelTwoImageName: String = "bg_l2"
+    
     
     
     // MARK: properties
@@ -29,11 +28,6 @@ public class CustomNavigationController: UINavigationController {
     public var onDismissForViewController:
         [UIViewController: NavigationClosure] = [:]
     public var onCompletionForViewController: [UIViewController: () -> Void] = [:]
-    public var nightMode: Bool = false {
-        didSet {
-            updateBackgroundFor(viewControllers: viewControllers)
-        }
-    }
     
     public var backGroundAnimation: Bool = true
     public var backgroundImage: UIImage? {
@@ -71,31 +65,6 @@ public class CustomNavigationController: UINavigationController {
             }
         }
     }
-    /**
-     Default morning image for first level view controller
-     */
-    @objc open var morningLevelOneImage: UIImage? = {
-        return UIImage(named: morningLevelOneImageName, in: nil, compatibleWith: nil)
-    }()
-
-    /**
-     Default morning image for second level view controllers
-     */
-    @objc open var morningLevelTwoImage: UIImage? = {
-        return UIImage(named: morningLevelTwoImageName, in: nil, compatibleWith: nil)
-    }()
-
-    /**
-     Default evening image for first level view controller
-     */
-    @objc open var eveningLevelOneImage: UIImage? = {
-        return UIImage(named: eveningLevelOneImageName, in: nil, compatibleWith: nil)
-    }()
-
-    @objc open var eveningLevelTwoImage: UIImage? = {
-        return UIImage(named: eveningLevelTwoImageName, in: nil, compatibleWith: nil)
-    }()
-    
      // MARK:- Setup background
     private func setupBackground() {
         fadingInBackgroundImageView.frame = view.bounds
@@ -112,17 +81,11 @@ public class CustomNavigationController: UINavigationController {
     }
 
     // MARK:- LifeCycle
-    private func setupDarkMode() {
-        if #available(iOS 12.0, *) {
-            nightMode = traitCollection.userInterfaceStyle == .dark
-        }
-    }
-
     override open func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        self.setupDarkMode()
         self.setupBackground()
+        addPanGestureForPopTransitioning()
     }
 
     override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -130,7 +93,7 @@ public class CustomNavigationController: UINavigationController {
           if #available(iOS 13.0, *) {
               if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
                   // do your customization here
-                  nightMode = traitCollection.userInterfaceStyle == .dark
+                  updateBackgroundFor(viewControllers: viewControllers)
               }
           }
     }
@@ -158,12 +121,18 @@ public class CustomNavigationController: UINavigationController {
     }
     
     private func levelOneDefaultBackgroundImage() -> UIImage? {
-           return self.nightMode ? self.eveningLevelOneImage : self.morningLevelOneImage
-       }
+        let image = UIImage(named: CustomNavigationController.LevelOneImageName, in: nil, compatibleWith: nil)
+        let asset = image?.imageAsset
+        let levelOneImage = asset?.image(with: traitCollection)
+        return levelOneImage
+    }
 
-       private func levelTwoDefaultBackgroundImage() -> UIImage? {
-           return self.nightMode ? self.eveningLevelTwoImage : self.morningLevelTwoImage
-       }
+    private func levelTwoDefaultBackgroundImage() -> UIImage? {
+        let image = UIImage(named: CustomNavigationController.LevelTwoImageName, in: nil, compatibleWith: nil)
+        let asset = image?.imageAsset
+        let levelTwoImage = asset?.image(with: traitCollection)
+        return levelTwoImage
+    }
     
     // MARK:- handle completion and dismiss
     func performOnDismissed(for viewController: UIViewController) {
@@ -186,7 +155,7 @@ extension CustomNavigationController: UINavigationControllerDelegate {
                                            to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 
         self.updateBackgroundFor(viewControllers: self.viewControllers)
-
+        // viewcontroller animator will handle push and pop animation for all custom navigation controller transition
         let animation = ViewControllerAnimator(within: 0.6, using: .present)
         animation.isPush = (operation == .push)
         return animation
@@ -203,5 +172,17 @@ extension CustomNavigationController: UINavigationControllerDelegate {
         if let presentedViewController = navigationController.transitionCoordinator?.viewController(forKey: .to), navigationController.viewControllers.contains(presentedViewController) {
             performOnCompletion(for: presentedViewController)
         }
+    }
+}
+// swipeable navigation
+extension CustomNavigationController {
+    func addPanGestureForPopTransitioning() {
+        let navigationController = self
+        let targets: [AnyObject] = navigationController.interactivePopGestureRecognizer?.value(forKey: "_targets") as! [AnyObject]
+        guard let interactivePanTarget = targets.first?.value(forKey: "target")  else {return}
+        let pan = UIPanGestureRecognizer(target: interactivePanTarget, action: NSSelectorFromString("handleNavigationTransition:"))
+        self.view.addGestureRecognizer(pan)
+        self.interactivePopGestureRecognizer?.isEnabled = false
+        
     }
 }

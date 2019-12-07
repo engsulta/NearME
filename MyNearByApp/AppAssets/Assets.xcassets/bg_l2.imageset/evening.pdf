@@ -1,0 +1,443 @@
+%PDF-1.1
+1 0 obj
+<<
+    /Type /Catalog
+    /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+    /Type /Pages
+    /Kids [ 4 0 R 6 0 R ]
+    /Count 2
+>>
+endobj
+3 0 obj
+<<
+    /ExtGState <<
+        /Alpha28 <<
+            /Type /ExtGState
+            /CA 0.10980392156862745
+        >>
+        /alpha28 <<
+            /Type /ExtGState
+            /ca 0.10980392156862745
+        >>
+        /Alpha41 <<
+            /Type /ExtGState
+            /CA 0.1607843137254902
+        >>
+        /alpha41 <<
+            /Type /ExtGState
+            /ca 0.1607843137254902
+        >>
+        /Alpha255 <<
+            /Type /ExtGState
+            /CA 1
+        >>
+        /alpha255 <<
+            /Type /ExtGState
+            /ca 1
+        >>
+        /Alpha5 <<
+            /Type /ExtGState
+            /CA 0.0196078431372549
+        >>
+        /alpha5 <<
+            /Type /ExtGState
+            /ca 0.0196078431372549
+        >>
+        /Alpha42 <<
+            /Type /ExtGState
+            /CA 0.16470588235294117
+        >>
+        /alpha42 <<
+            /Type /ExtGState
+            /ca 0.16470588235294117
+        >>
+    >>
+    /Pattern <<
+        /P1 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.981171190738678 0.7777377170024683 0.3813633322715759 ]
+                    /C1 [ 0.968022882938385 0.4202542304992676 0.11012528091669083 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 187.49999999999997 645.1858458227041 187.50000000000003 0 ]
+            >>
+        >>
+        /P2 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.981171190738678 0.8522508144378662 0.3813633322715759 ]
+                    /C1 [ 0.9725490196078431 0.5568627450980392 0.19607843137254896 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 96.38165941938658 361.22368057068445 91.54802808061345 228.58491317931555 ]
+            >>
+        >>
+        /P3 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.981171190738678 0.8522508144378662 0.3813633322715759 ]
+                    /C1 [ 0.9725490196078431 0.5647058823529411 0.20000000000000004 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 267.4383108695858 352.59791129179223 272.1280953804142 212.86693245820777 ]
+            >>
+        >>
+        /P4 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9725490196078431 0.596078431372549 0.21960784313725493 ]
+                    /C1 [ 0.984313725490196 0.8549019607843138 0.3803921568627451 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 135.83283400535586 235.2929687499999 135.83283400535586 138.9023437499999 ]
+            >>
+        >>
+        /P5 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9725490196078431 0.596078431372549 0.21960784313725493 ]
+                    /C1 [ 0.984313725490196 0.8549019607843138 0.3803921568627451 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 376.3589870929717 232.20079054111125 376.3589870929717 89.39682394253941 ]
+            >>
+        >>
+        /P6 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9146471088435374 0.5467702721912694 0.2102021024881307 ]
+                    /C1 [ 0.8823529411764706 0.5137254901960784 0.17647058823529418 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 155.5 287.94414918745275 155.5 260.35960530045344 ]
+            >>
+        >>
+        /P7 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9146471088435374 0.5467702721912694 0.2102021024881307 ]
+                    /C1 [ 0.8823529411764706 0.5137254901960784 0.17647058823529418 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 155.5 278.2799445950255 155.5 268.61209243463003 ]
+            >>
+        >>
+        /P8 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9146471088435374 0.5467702721912694 0.2102021024881307 ]
+                    /C1 [ 0.8823529411764706 0.5137254901960784 0.17647058823529418 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 155.5 288.4720745937264 155.5 274.6798026502268 ]
+            >>
+        >>
+        /P9 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9146471088435374 0.5467702721912694 0.2102021024881307 ]
+                    /C1 [ 0.8823529411764706 0.5137254901960784 0.17647058823529418 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 155.5 206.84927130574448 155.5 229.0368392148526 ]
+            >>
+        >>
+        /P10 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9146471088435374 0.5467702721912694 0.2102021024881307 ]
+                    /C1 [ 0.8823529411764706 0.5137254901960784 0.17647058823529418 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 155.5 214.6226532605229 155.5 222.39896912866703 ]
+            >>
+        >>
+        /P11 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.9146471088435374 0.5467702721912694 0.2102021024881307 ]
+                    /C1 [ 0.8823529411764706 0.5137254901960784 0.17647058823529418 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 155.5 206.4246356528722 155.5 217.51841960742627 ]
+            >>
+        >>
+        /P12 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.6263484308714996 0.5016711189240137 0.9213966836734694 ]
+                    /C1 [ 0.26865415219907407 0.30572396383404915 0.6828231292517006 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 187.5 174.50282239822332 187.5 572.3007930660434 ]
+            >>
+        >>
+        /P13 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.5032950113460406 0.4735102431025283 0.8495429421768708 ]
+                    /C1 [ 0.32941176470588235 0.34117647058823536 0.7254901960784313 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 80.00000000000011 328.0271034350759 80.00000000000011 238.83661202178996 ]
+            >>
+        >>
+        /P14 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.5032950113460406 0.4735102431025283 0.8495429421768708 ]
+                    /C1 [ 0.32941176470588235 0.34117647058823536 0.7254901960784313 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 284 392.2519798548126 284 233.52631494321486 ]
+            >>
+        >>
+        /P15 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.5032950113460407 0.4735102431025283 0.8495429421768708 ]
+                    /C1 [ 0.32941176470588235 0.34117647058823536 0.7254901960784313 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 80 171.98827527464272 80 242.58227992280746 ]
+            >>
+        >>
+        /P16 <<
+            /Type /Pattern
+            /PatternType 2
+            /Matrix [ 1 0 0 1 0 0 ]
+            /Shading <<
+                /ShadingType 2
+                /ColorSpace /DeviceRGB
+                /Extend [ true true ]
+                /Function <<
+                    /FunctionType 2
+                    /C0 [ 0.5032950113460407 0.4735102431025283 0.8495429421768708 ]
+                    /C1 [ 0.32941176470588235 0.34117647058823536 0.7254901960784313 ]
+                    /Domain [ 0 1 ]
+                    /N 1
+                >>
+                /Coords [ 284 138.4140625 284 243 ]
+            >>
+        >>
+    >>
+>>
+endobj
+4 0 obj
+<<
+    /Type /Page
+    /Parent 2 0 R
+    /Resources 3 0 R
+    /MediaBox [ 0 0 375 667 ]
+    /Contents 5 0 R
+>>
+endobj
+5 0 obj
+<<
+    /Filter /FlateDecode
+    /Length 1004
+>>
+stream
+xœV[9üÏ)tsDêı¹7ÈÆ&ùğ‹$÷ÇênOŒ`1À˜%óQ¤(ÒoŸßıúûÇ÷tÿ™Ş>súyÿrê}¤RÍ¤‡IŸ9şûé·”¾|â”iåÿ£¬ôãkú$¥QK¥¸Æ4–é8¬„]ì­»ËcªÖV^’Â$hğR#;F ­¬âö¡r¸exğ¸;Õ·§\År½É€b¥®lk¡Û¼(k~½QnIf¡´±º›¹Lšà0…D5¹-ıR@íû	¯UhlÙ#<®á¯H#Å/2ˆ;H1ÀŞ©.u72â2u#l§¥eª
+A«£’–à¼pÆå˜úZpUY/±ÔLYğ1¨*™‚ Eó«§ ß†zNÔS¿¯ÒiV¤ˆâè÷µuZàÕ*‰áeèd%rI ÒD“kğÉTD¬U²V):M¥ß;ÍO£ÓôOÍŞşzüûí]fúŠš½Ÿ2·‰
+gíİŠê#/C}@`Îò²¦Q‰Å®:”Aß\èçÈ&No¥­l²»0q{Şúò`­§‚êŞx4½Õš™J9Úğx[¢­í`ÒÒÎu 1p³aÅ«—NÚ±×oÚ“·é†ávÃ¦›Îº;‰ûÃ¡¶ˆæPêôü ålù¬Z„IİvŒçÎ+¹× J}U7ƒ¥-å†r§FÄ°ÜtÙ>§€
+aì`<­JC6®¹¨ãÄšE¬@ú¼Í´²‘€hÔxÃK]Û,Àfï(¢¹Uyby0ËÏ• uÌ;ÌšÀ…+aüâV	-hò	€ÙÆc[Ö·.ÜÓ dsÂ,TrG*E WØÏÌ>Ğ•¦}º¹Y¶¥25½İ¬Yò(P•n…£3ƒ;*ŒaË§.·1Ñ}™AB=<Ó{¹ªb5•ÏQã²rŒ¼ó½7áğh½‘…V;&‚vç¹;r¥\.»#*õØ]]œ‹¤éøşb;·t¬-b[pÃ¤İÛElrnh#=Ö…¾"ÿŞ×LÃz¬ÆFÍóÜÜÙÍccp_ØŞşÔÏÄ¤_6†ıˆaš¶fÑÍPÇÀ¼şë oí2é0öNÁÜ#J¼öØØøqàê%vå'°5_\}÷º6ıı€¨î±°u«¶Ñë¼€Cë¥«qu…‘kcÇ¼uÌílËWµ—îækf£ú•˜³ü™ÙººÊ}»Â’óÎQW8´^ºÂŠ‹/¶únwâ¹¸»®Š¯=òkvŒ‡=·»|d‡fšú»´±¶–˜5Ó¾x±Î8[Æñÿi™­iAş©–Vl
+endstream
+endobj
+6 0 obj
+<<
+    /Type /Page
+    /Parent 2 0 R
+    /Resources 3 0 R
+    /MediaBox [ 0 0 375 667 ]
+    /Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+    /Filter /FlateDecode
+    /Length 1581
+>>
+stream
+xœWK®7ÜûºÀÈ¢şZæ¾‚1HìÅ³Ø¾?RERêÛA‚ÌSuóS¤(RışÃÇ?şüö5<¿‡÷$‡ïÏ¯!…ŞGøÊhºzÓUÂÿä¿öôs½“À¿oŸÂ»Ükl#”Òâ„v#V	¥ û
+2e„ÜÌ˜%<CnÀ9”•bj!W‰iåXrÈyÆÙ™c^”•¦vp*QJ(­ÄAY Ÿ)ÎIÙ¯0A»Mâ€lnqÃîÁ¢Àm©Ì à?TôŸ˜3q¬gºs’6üàj’XÁ©A ”*‚Éq‚ÒÒPKR«³Ä>AxP¨ô²eYiœ¢`>e©ÑŞc$D@ò•ëÓ¶âıëfİÌxæRc/©–Xº´bâÂ+ÓB*@ç2±–2ãdœ™qcƒğ2I·Àshdc¯ÍÃÛİİÛoYUe%ğÏØ±Y_‚0	`]´7Óó†ıÕ§¥¥X	Á«#›9¯ŒçÛ‚¤_‹©–)«€™F*ÙfVóSp¸Z1ó}Í=Îª©M|_[¼ZeáwC&‘È- 3E=%HpÇï¨SEbšü,qõëY²§?¥÷¼ııùcŸ³g)m"Á‰g³"ùˆJQGQ?DRôõŠ%Á•dİiy5ÁÿOh ú@‘oa]›	]nË[^]&^z¬äö!8™{Ê£PÊyĞÖ€ÅNN‹Ü }`_]K–j7êtP½nü`1NÙªºÙİ¥«n:?ÑİAtì²@C©Ób°-%$–£Évö<h°¸ İ ù˜U$†ªªƒÁbA™âAftC÷èš›Î+Û×!´×/Ú´Ğ³#ÁğbÍÜ—#ôDt)WcfÑ< èJ=ö8§k«9Øì¹7Ór"/,ó¬±âĞ! ^;[ã"è¾‹»ª=ÛĞĞÆí ­MÆÖÂ“ì&<†ÍGÚ%Tƒ+3Ä•;0Q÷ıÊì'º˜%]é¦¦ÑækÜİÄ¨™È;¥iáÑåÇÀF¯‡(ßæ:º4[ºt'.î^éı~>4íÄÖi0²®^ã@[9:G›gr<âÜœÉ‘r\íŒ4è5=R©Ü¦Ga{btš¸FIcÿş•e¿æ„´4|^à0ÚHdË×¼ Gmê>0x’ì½Áí¡Ö30DogfHS÷™!¸¯hd{fØq¿f"Ëı63pYcÏ•´	!Á0ôÙçÃ…wl#4\6êØøíàji4á°%÷Â¨Ú¿C¦;i¬™è ƒ™·­ª“CêGjO#{€>ª½D5;÷VÜë»Ø«*jÀõx?:Š©‹ş¿%(k®ş?	Ú’ÿ \%­¾ÈÃĞª‹Œ¸¾Æ*êm+gK†)op|UN}kÊàÍÕ58R¿\„æĞÌqIÌºK’Ùº*Ê¾ªªè¸¢®E
+wüÊ2ü%Úq³—fÌò‡óÅşs½ìqô»rc«¼YÆEºİ=ß™9ñ‚#_—v*ÌWL{r]~ñ+‰ı¬âD.={)a®fN‚kS<t]õØîoäEm¼šœ¼Ûİ<:›`#é"N|?€a	³V?'<äÂ	Oï¼U¡fËíx¡øõj0—b×‘vlvfñòxçã3jù¢SåA–¸Ç«NF"ÍÙÌ$ûy™}ß˜»nöÒ™¦æâör)×Ky*ÙËòT¶—ç;³ı ·Ü3`lÍ;|=ñ®¡QğÃhq”X£Æ™ÃıwíMW¹â¯J'ÔMÜv”N;ä¯W:³/Eı86yo77>»&w@û?J7O3ƒªoÜsı‚Í"öÉƒjg¶…7T âi›ZoOoâífÿ¹îá¸>Ggû‡æK¿â–A¥ÏÚFÂØœT‰ç ‹GÎ—¥+öÂwcâ'ˆãúzÙ˜µ›²}(ËÀç—ç;3§‹Á3©ËØâ‚›8–“©  xu¯Ó,¢ø÷Dõ†W`J¨d¶u”Ä¯WÚ†/ÅJ–—Íjw’íñÎÇ9şX8n3
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000066 00000 n 
+0000000143 00000 n 
+0000011730 00000 n 
+0000011856 00000 n 
+0000012941 00000 n 
+0000013067 00000 n 
+trailer
+<<
+    /Root 1 0 R
+    /Size 8
+>>
+startxref
+14729
+%%EOF
+1 0 obj
+<< /Info 9 0 R /Pages 2 0 R /Type /Catalog >>
+endobj
+4 0 obj
+<< /Resources 3 0 R /Type /Page /Contents 5 0 R /Rotate 0 /MediaBox [ 0 0
+375 667 ] /Parent 2 0 R >>
+endobj
+6 0 obj
+<< /Resources 3 0 R /Type /Page /Contents 7 0 R /Rotate 0 /MediaBox [ 0 0
+375 667 ] /Parent 2 0 R >>
+endobj
+8 0 obj
+<< /Producer (macOS Version 10.15.1 \(Build 19B88\) Quartz PDFContext, AppendMode 1.1)
+/ModDate (D:20191207125937Z00'00') >>
+endobj
+9 0 obj
+8 0 R
+endobj
+xref
+0 2
+0000000000 65535 f 
+0000014962 00000 n 
+4 1
+0000015023 00000 n 
+6 1
+0000015139 00000 n 
+8 2
+0000015255 00000 n 
+0000015395 00000 n 
+trailer
+<< /ID [<><96BABE37A30805CF2F8BBE2C45824DF0> ] /Root 1 0 R /Size 10 /Prev 14729 >> 
+startxref
+15416
+%%EOF
